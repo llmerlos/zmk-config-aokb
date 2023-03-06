@@ -15,12 +15,17 @@
 #define DSC_SSC LS(LC(F11))
 #define DSC_EXT LS(LC(F12))
 
+#define SS_W    LG(RS(S))
+#define SS_M    LG(RS(N4))
+
+#define TI_W    RA(N4)
+#define TI_M    RA(ES_NTIL)
 
 / {
     macros {
         rabk: rabk {
             label = "rabk";
-            compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-macro";∫
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LSHFT>
@@ -59,6 +64,10 @@
                 ;
         };
     };
+};
+
+&ht {
+    flavor = "tap-preferred";
 };
 
 / {
@@ -100,7 +109,7 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp ES_IEXL &labk       &rabk       &kp ES_AMPS &kp ES_CIRC             &du_jk      &kp N7      &kp N8      &kp N9      &kp ES_BULT
 &trans      &kp ES_QUOT &kp ES_MINUS &kp ES_PLUS &kp ES_EQL &kp ES_EXCL             &kp ES_NTIL &kp N4      &kp N5      &kp N6      &kp N0      &trans
-&trans      &kp RA(ES_NTIL) &kp ES_PRCNT &kp ES_ASTRK &kp ES_UNDS &kp ES_PIPE       &kp ES_CMMA &kp N1      &kp N2      &kp N3      &kp ES_DOT  &trans
+&trans      &ht TI_W TI_M &kp ES_PRCNT &kp ES_ASTRK &kp ES_UNDS &kp ES_PIPE         &kp ES_CMMA &kp N1      &kp N2      &kp N3      &kp ES_DOT  &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
@@ -118,8 +127,8 @@
         adjust_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                  &kp PG_UP   &to _GAME   &kp DSC_DFN &kp DSC_EXT &kp LG(RS(S))
-&trans      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10                 &none       &to _BASE   &kp DSC_MUT &kp DSC_SSC &kp LG(RS(N4))       &trans
+            &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                  &kp PG_UP   &to _GAME   &kp DSC_DFN &kp DSC_EXT &none
+&trans      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10                 &none       &to _BASE   &kp DSC_MUT &kp DSC_SSC &ht SS_W SS_M   &trans
 &trans      &kp F11     &kp F12     &kp PSCRN   &kp SLCK    &kp PAUSE_BREAK         &kp PG_DN   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_CLR &kp INS    &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
