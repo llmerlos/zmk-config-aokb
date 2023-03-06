@@ -66,10 +66,6 @@
     };
 };
 
-&ht {
-    flavor = "tap-preferred";
-};
-
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -109,7 +105,7 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp ES_IEXL &labk       &rabk       &kp ES_AMPS &kp ES_CIRC             &du_jk      &kp N7      &kp N8      &kp N9      &kp ES_BULT
 &trans      &kp ES_QUOT &kp ES_MINUS &kp ES_PLUS &kp ES_EQL &kp ES_EXCL             &kp ES_NTIL &kp N4      &kp N5      &kp N6      &kp N0      &trans
-&trans      &ht TI_W TI_M &kp ES_PRCNT &kp ES_ASTRK &kp ES_UNDS &kp ES_PIPE         &kp ES_CMMA &kp N1      &kp N2      &kp N3      &kp ES_DOT  &trans
+&trans      &ht_tp TI_W TI_M &kp ES_PRCNT &kp ES_ASTRK &kp ES_UNDS &kp ES_PIPE         &kp ES_CMMA &kp N1      &kp N2      &kp N3      &kp ES_DOT  &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
@@ -128,7 +124,7 @@
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                  &kp PG_UP   &to _GAME   &kp DSC_DFN &kp DSC_EXT &none
-&trans      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10                 &none       &to _BASE   &kp DSC_MUT &kp DSC_SSC &ht SS_W SS_M   &trans
+&trans      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10                 &none       &to _BASE   &kp DSC_MUT &kp DSC_SSC &ht_tp SS_W SS_M   &trans
 &trans      &kp F11     &kp F12     &kp PSCRN   &kp SLCK    &kp PAUSE_BREAK         &kp PG_DN   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_CLR &kp INS    &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
