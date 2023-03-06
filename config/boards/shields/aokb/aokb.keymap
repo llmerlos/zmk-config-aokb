@@ -53,6 +53,16 @@
                 ;
         };
 
+        ca_ll: ca_ll {
+            label = "ca_ll";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp ES_BULT>
+                , <&macro_tap &kp L>
+                ;
+        };
+
         talpha: talpha {
             label = "talpha";
             compatible = "zmk,behavior-macro";
@@ -115,7 +125,7 @@
         lower_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp ES_IEXL &labk       &rabk       &kp ES_AMPS &kp ES_CIRC             &du_jk      &kp N7      &kp N8      &kp N9      &kp ES_BULT
+            &kp ES_IEXL &labk       &rabk       &kp ES_AMPS &kp ES_CIRC             &du_jk      &kp N7      &kp N8      &kp N9      &ca_ll
 &trans      &kp ES_QUOT &kp ES_MINUS &kp ES_PLUS &kp ES_EQL &kp ES_EXCL             &kp ES_NTIL &kp N4      &kp N5      &kp N6      &kp N0      &trans
 &trans      &ht_tp TI_W TI_M &kp ES_PRCNT &kp ES_ASTRK &kp ES_UNDS &kp ES_PIPE         &kp ES_CMMA &kp N1      &kp N2      &kp N3      &kp ES_DOT  &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
