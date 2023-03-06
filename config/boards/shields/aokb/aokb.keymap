@@ -67,6 +67,18 @@
 };
 
 / {
+
+    behaviors {
+        ht_tp: ht_tp{
+            compatible = "zmk,behavior-hold-tap";
+            label = "hold_tap_tap_preferred";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+
     keymap {
         compatible = "zmk,keymap";
 
