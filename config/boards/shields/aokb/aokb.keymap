@@ -19,7 +19,7 @@
 #define SS_M    LG(RS(N4))
 
 #define TI_W    RA(N4)
-#define TI_M    RA(ES_NTIL)
+#define TI_M    RA(ES_N_TILDE)
 
 / {
     macros {
@@ -58,7 +58,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp ES_BULT>
+                = <&macro_tap &kp ES_MIDDOT>
                 , <&macro_tap &kp L>
                 ;
         };
@@ -95,10 +95,10 @@
         default_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp ES_SCLN &kp W       &kp F       &kp P       &kp B                   &kp J       &kp L       &kp U       &kp Y       &kp Q
+            &kp ES_SEMI &kp W       &kp F       &kp P       &kp B                   &kp J       &kp L       &kp U       &kp Y       &kp Q
 &kp TAB     &kp A       &kp R       &kp S       &kp T       &kp G                   &kp M       &kp N       &kp E       &kp I       &kp O       &kp RET
-&kp LCTL    &kp Z       &kp X       &kp C       &kp D       &kp V                   &kp K       &kp H       &kp ES_CMMA &kp ES_DOT  &kp ES_FSLH &kp RALT
-                                    &kp RWIN    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
+&kp LCTL    &kp Z       &kp X       &kp C       &kp D       &kp V                   &kp K       &kp H       &kp ES_COMMA &kp ES_DOT  &kp ES_FSLH &kp RALT
+                                    &kp LWIN    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
             >;
         };
 
@@ -106,9 +106,9 @@
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp TAB     &kp Q       &kp W       &kp E       &kp R                   &kp Y       &kp U       &kp I       &kp O       &kp P
-&kp ESC     &kp LSFT    &kp A       &kp S       &kp D       &kp F                   &kp H       &kp J       &kp K       &kp L       &kp ES_NTIL &kp RET
-&kp B       &kp LCTL    &kp Z       &kp X       &kp C       &kp V                   &kp N       &kp M       &kp ES_CMMA &kp ES_DOT  &kp ES_MINUS &kp RALT
-                                    &kp RALT    &kp SPACE   &mo _GNUM               &mo _LOWER  &kp BSPC    &talpha
+&kp ESC     &kp LSFT    &kp A       &kp S       &kp D       &kp F                   &kp H       &kp J       &kp K       &kp L       &kp ES_N_TILDE &kp RET
+&kp B       &kp LCTL    &kp Z       &kp X       &kp C       &kp V                   &kp N       &kp M       &kp ES_COMMA &kp ES_DOT  &kp ES_MINUS &kp LGUI
+                                    &kp LALT    &kp SPACE   &mo _GNUM               &mo _LOWER  &kp BSPC    &talpha
             >;
         };
 
@@ -125,9 +125,9 @@
         lower_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp ES_IEXL &labk       &rabk       &kp ES_AMPS &kp ES_CIRC             &du_jk      &kp N7      &kp N8      &kp N9      &ca_ll
-&trans      &kp ES_QUOT &kp ES_MINUS &kp ES_PLUS &kp ES_EQL &kp ES_EXCL             &kp ES_NTIL &kp N4      &kp N5      &kp N6      &kp N0      &trans
-&trans      &ht_tp TI_W TI_M &kp ES_PRCNT &kp ES_ASTRK &kp ES_UNDS &kp ES_PIPE         &kp ES_CMMA &kp N1      &kp N2      &kp N3      &kp ES_DOT  &trans
+            &kp ES_IEXCL &labk      &rabk       &kp ES_AMPS &kp ES_CARET            &du_jk      &kp N7      &kp N8      &kp N9      &ca_ll
+&trans      &kp ES_SQT  &kp ES_MINUS &kp ES_PLUS &kp ES_EQUAL &kp ES_EXCL           &kp ES_N_TILDE &kp N4   &kp N5      &kp N6      &kp N0      &trans
+&trans      &ht_tp TI_W TI_M &kp ES_PRCNT &kp ES_ASTRK &kp ES_UNDER &kp ES_PIPE     &kp ES_COMMA &kp N1     &kp N2      &kp N3      &kp ES_DOT  &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
@@ -135,9 +135,9 @@
         raise_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp RG(Q)   &kp HOME    &kp UP      &kp END     &kp ES_FORD             &kp ES_BSLS &kp ES_LBRC &kp ES_RBRC &kp ES_HASH &kp ES_IQMRK
-&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp ES_MORD             &kp ES_QMARK &kp ES_LPRN &kp ES_RPRN &kp ES_COLN &kp ES_DQT &trans
-&trans      &kp DEL     &kp ES_GRAV &kp ES_CCED &kp ES_ACUT &kp ES_DIAE             &kp ES_AT   &kp ES_LCBR &kp ES_RCBR &kp ES_DLLR  &kp CLCK   &trans
+            &kp RG(Q)   &kp HOME    &kp UP      &kp END     &kp ES_ORDF             &kp ES_BSLS &kp ES_LBKT &kp ES_RBKT &kp ES_HASH &kp ES_IQMARK
+&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp ES_ORDM             &kp ES_QMARK &kp ES_LPAR &kp ES_RPAR &kp ES_COLON &kp ES_DQT &trans
+&trans      &kp DEL     &kp ES_GRAVE &kp ES_C_CEDILLA &kp ES_ACUTE &kp ES_UMLAUT    &kp ES_AT   &kp ES_LBRC &kp ES_RBRC &kp ES_DLLR  &kp CLCK   &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };

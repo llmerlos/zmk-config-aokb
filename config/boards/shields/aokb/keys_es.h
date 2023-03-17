@@ -1,143 +1,334 @@
 /*
- * Copyright (c) 2020 The ZMK Contributors
+ * Localized Keys for Spanish
  *
- * SPDX-License-Identifier: MIT
+ * This file was generated from data with the following license:
+ *
+ * UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
+ * 
+ * See Terms of Use for definitions of Unicode Inc.'s
+ * Data Files and Software.
+ * 
+ * NOTICE TO USER: Carefully read the following legal agreement.
+ * BY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S
+ * DATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),
+ * YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
+ * TERMS AND CONDITIONS OF THIS AGREEMENT.
+ * IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
+ * THE DATA FILES OR SOFTWARE.
+ * 
+ * COPYRIGHT AND PERMISSION NOTICE
+ * 
+ * Copyright © 1991-2022 Unicode, Inc. All rights reserved.
+ * Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of the Unicode data files and any associated documentation
+ * (the "Data Files") or Unicode software and any associated documentation
+ * (the "Software") to deal in the Data Files or Software
+ * without restriction, including without limitation the rights to use,
+ * copy, modify, merge, publish, distribute, and/or sell copies of
+ * the Data Files or Software, and to permit persons to whom the Data Files
+ * or Software are furnished to do so, provided that either
+ * (a) this copyright and permission notice appear with all copies
+ * of the Data Files or Software, or
+ * (b) this copyright and permission notice appear in associated
+ * Documentation.
+ * 
+ * THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
+ * ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+ * WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT OF THIRD PARTY RIGHTS.
+ * IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS
+ * NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL
+ * DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+ * DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+ * TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+ * PERFORMANCE OF THE DATA FILES OR SOFTWARE.
+ * 
+ * Except as contained in this notice, the name of a copyright holder
+ * shall not be used in advertising or otherwise to promote the sale,
+ * use or other dealings in these Data Files or Software without prior
+ * written authorization of the copyright holder.
  */
+
 #pragma once
 
 #include <dt-bindings/zmk/hid_usage.h>
 #include <dt-bindings/zmk/hid_usage_pages.h>
 #include <dt-bindings/zmk/modifiers.h>
-#include <dt-bindings/zmk/keys.h>
 
-/*
- * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
- * │ º │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │ ' │ ¡ │       │
- * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │     │ Q │ W │ E │ R │ T │ Y │ U │ I │ O │ P │ ` │ + │     │
- * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
- * │      │ A │ S │ D │ F │ G │ H │ J │ K │ L │ Ñ │ ´ │ Ç │    │
- * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
- * │    │ < │ Z │ X │ C │ V │ B │ N │ M │ , │ . │ - │          │
- * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
- * │    │    │    │                        │    │    │    │    │
- * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
- */
-// Row 1
-#define ES_MORD (GRAV ) // º
-#define ES_1    (N1   ) // 1
-#define ES_2    (N2   ) // 2
-#define ES_3    (N3   ) // 3
-#define ES_4    (N4   ) // 4
-#define ES_5    (N5   ) // 5
-#define ES_6    (N6   ) // 6
-#define ES_7    (N7   ) // 7
-#define ES_8    (N8   ) // 8
-#define ES_9    (N9   ) // 9
-#define ES_0    (N0   ) // 0
-#define ES_QUOT (MINUS) // '
-#define ES_IEXL (EQL ) // ¡
-// Row 2
-#define ES_Q    (Q   ) // Q
-#define ES_W    (W   ) // W
-#define ES_E    (E   ) // E
-#define ES_R    (R   ) // R
-#define ES_T    (T   ) // T
-#define ES_Y    (Y   ) // Y
-#define ES_U    (U   ) // U
-#define ES_I    (I   ) // I
-#define ES_O    (O   ) // O
-#define ES_P    (P   ) // P
-#define ES_GRAV (LBKT) // ` (dead)
-#define ES_PLUS (RBKT) // +>*-%
-// Row 3
-#define ES_A    (A   ) // A
-#define ES_S    (S   ) // S
-#define ES_D    (D   ) // D
-#define ES_F    (F   ) // F
-#define ES_G    (G   ) // G
-#define ES_H    (H   ) // H
-#define ES_J    (J   ) // J
-#define ES_K    (K   ) // K
-#define ES_L    (L   ) // L
-#define ES_NTIL (SCLN) // Ñ
-#define ES_ACUT (QUOT) // ´ (dead)
-#define ES_CCED (NUHS) // Ç
-// Row 4
-#define ES_LT    (NUBS) // <
-#define ES_Z     (Z   ) // Z
-#define ES_X     (X   ) // X
-#define ES_C     (C   ) // C
-#define ES_V     (V   ) // V
-#define ES_B     (B   ) // B
-#define ES_N     (N   ) // N
-#define ES_M     (M   ) // M
-#define ES_CMMA  (CMMA) // ,
-#define ES_DOT   (DOT ) // .
-#define ES_MINUS (FSLH) // -
+#define ES_ESCAPE_CHARACTER (LC(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE)))
 
-/* Shifted symbols
- * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
- * │ ª │ ! │ " │ · │ $ │ % │ & │ / │ ( │ ) │ = │ ? │ ¿ │       │
- * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │     │   │   │   │   │   │   │   │   │   │   │ ^ │ * │     │
- * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
- * │      │   │   │   │   │   │   │   │   │   │   │ ¨ │   │    │
- * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
- * │    │ > │   │   │   │   │   │   │   │ ; │ : │ _ │          │
- * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
- * │    │    │    │                        │    │    │    │    │
- * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
- */
-// Row 1
-#define ES_FORD  (LS(ES_MORD)) // ª
-#define ES_EXCL  (LS(ES_1)   ) // !
-#define ES_DQT   (LS(ES_2)   ) // "
-#define ES_BULT  (LS(ES_3)   ) // ·
-#define ES_DLLR  (LS(ES_4)   ) // $
-#define ES_PRCNT (LS(ES_5)   ) // %
-#define ES_AMPS  (LS(ES_6)   ) // &
-#define ES_FSLH  (LS(ES_7)   ) // /
-#define ES_LPRN  (LS(ES_8)   ) // (
-#define ES_RPRN  (LS(ES_9)   ) // )
-#define ES_EQL   (LS(ES_0)   ) // =
-#define ES_QMARK (LS(ES_QUOT)) // ?
-#define ES_IQMRK (LS(ES_IEXL)) // ¿
-// Row 2
-#define ES_CIRC  (LS(ES_GRAV))  // ^ (dead)
-#define ES_ASTRK (LS(ES_PLUS)) // *
-// Row 3
-#define ES_DIAE  (LS(ES_ACUT)) // ¨ (dead)
-// Row 4
-#define ES_GT   (LS(ES_LT)) // >
-#define ES_SCLN (LS(CMMA) ) // ;
-#define ES_COLN (LS(DOT)  ) // :
-#define ES_UNDS (LS(ES_MINUS)) // _
+#define ES_FILE_SEPARATOR (LC(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_BACKSLASH_AND_PIPE)))
 
-/* AltGr symbols
- * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
- * │ \ │ | │ @ │ # │ ~ │ € │ ¬ │   │   │   │   │   │   │       │
- * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │     │   │   │   │   │   │   │   │   │   │   │ [ │ ] │     │
- * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
- * │      │   │   │   │   │   │   │   │   │   │   │ { │ } │    │
- * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
- * │    │   │   │   │   │   │   │   │   │   │   │   │          │
- * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
- * │    │    │    │                        │    │    │    │    │
- * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
- */
-// Row 1
-#define ES_BSLS  (RA(ES_MORD)) // (backslash)
-#define ES_PIPE  (RA(ES_1)   ) // |
-#define ES_AT    (RA(ES_2)   ) // @
-#define ES_HASH  (RA(ES_3)   ) // #
-#define ES_TILDE (RA(ES_4)   ) // ~
-#define ES_EURO  (RA(ES_5)   ) // €
-#define ES_NOT   (RA(ES_6)   ) // ¬
-// Row 2 
-#define ES_LBRC  (RA(ES_GRAV)) // [
-#define ES_RBRC  (RA(ES_PLUS)) // ]
-// Row 3 
-#define ES_LCBR  (RA(ES_ACUT)) // {
-#define ES_RCBR  (RA(ES_CCED)) // }
+#define ES_GROUP_SEPARATOR (LC(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE)))
+
+#define ES_SPACE (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SPACEBAR))
+
+/* ! */
+#define ES_EXCLAMATION (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_1_AND_EXCLAMATION)))
+#define ES_EXCL (ES_EXCLAMATION)
+
+/* " */
+#define ES_DOUBLE_QUOTES (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_2_AND_AT)))
+#define ES_DQT (ES_DOUBLE_QUOTES)
+
+/* # */
+#define ES_HASH (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_3_AND_HASH)))
+#define ES_POUND (ES_HASH)
+
+/* $ */
+#define ES_DOLLAR (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_4_AND_DOLLAR)))
+#define ES_DLLR (ES_DOLLAR)
+
+/* % */
+#define ES_PERCENT (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_5_AND_PERCENT)))
+#define ES_PRCNT (ES_PERCENT)
+
+/* & */
+#define ES_AMPERSAND (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_6_AND_CARET)))
+#define ES_AMPS (ES_AMPERSAND)
+
+/* ' */
+#define ES_SINGLE_QUOTE (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE))
+#define ES_SQT (ES_SINGLE_QUOTE)
+#define ES_APOSTROPHE (ES_SINGLE_QUOTE)
+#define ES_APOS (ES_SINGLE_QUOTE)
+
+/* ( */
+#define ES_LEFT_PARENTHESIS (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_8_AND_ASTERISK)))
+#define ES_LPAR (ES_LEFT_PARENTHESIS)
+
+/* ) */
+#define ES_RIGHT_PARENTHESIS (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS)))
+#define ES_RPAR (ES_RIGHT_PARENTHESIS)
+
+/* * */
+#define ES_ASTERISK (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE)))
+#define ES_ASTRK (ES_ASTERISK)
+#define ES_STAR (ES_ASTERISK)
+
+/* + */
+#define ES_PLUS (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE))
+
+/* , */
+#define ES_COMMA (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_COMMA_AND_LESS_THAN))
+
+/* - */
+#define ES_MINUS (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SLASH_AND_QUESTION_MARK))
+
+/* . */
+#define ES_PERIOD (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN))
+#define ES_DOT (ES_PERIOD)
+
+/* / */
+#define ES_SLASH (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND)))
+#define ES_FSLH (ES_SLASH)
+
+/* 0 */
+#define ES_N0 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS))
+
+/* 1 */
+#define ES_N1 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_1_AND_EXCLAMATION))
+
+/* 2 */
+#define ES_N2 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_2_AND_AT))
+
+/* 3 */
+#define ES_N3 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_3_AND_HASH))
+
+/* 4 */
+#define ES_N4 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_4_AND_DOLLAR))
+
+/* 5 */
+#define ES_N5 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_5_AND_PERCENT))
+
+/* 6 */
+#define ES_N6 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_6_AND_CARET))
+
+/* 7 */
+#define ES_N7 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND))
+
+/* 8 */
+#define ES_N8 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_8_AND_ASTERISK))
+
+/* 9 */
+#define ES_N9 (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS))
+
+/* : */
+#define ES_COLON (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN)))
+
+/* ; */
+#define ES_SEMICOLON (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_COMMA_AND_LESS_THAN)))
+#define ES_SEMI (ES_SEMICOLON)
+
+/* < */
+#define ES_LESS_THAN (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))
+#define ES_LT (ES_LESS_THAN)
+
+/* = */
+#define ES_EQUAL (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS)))
+
+/* > */
+#define ES_GREATER_THAN (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))
+#define ES_GT (ES_GREATER_THAN)
+
+/* ? */
+#define ES_QUESTION (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE)))
+#define ES_QMARK (ES_QUESTION)
+
+/* @ */
+#define ES_AT_SIGN (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_2_AND_AT)))
+#define ES_AT (ES_AT_SIGN)
+
+/* [ */
+#define ES_LEFT_BRACKET (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE)))
+#define ES_LBKT (ES_LEFT_BRACKET)
+
+/* \ */
+#define ES_BACKSLASH (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE)))
+#define ES_BSLH (ES_BACKSLASH)
+
+/* ] */
+#define ES_RIGHT_BRACKET (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE)))
+#define ES_RBKT (ES_RIGHT_BRACKET)
+
+/* ^ */
+#define ES_CARET (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE)))
+
+/* _ */
+#define ES_UNDERSCORE (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SLASH_AND_QUESTION_MARK)))
+#define ES_UNDER (ES_UNDERSCORE)
+
+/* ` */
+#define ES_GRAVE (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE))
+
+/* a */
+#define ES_A (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_A))
+
+/* b */
+#define ES_B (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_B))
+
+/* c */
+#define ES_C (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_C))
+
+/* d */
+#define ES_D (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_D))
+
+/* e */
+#define ES_E (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_E))
+
+/* f */
+#define ES_F (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_F))
+
+/* g */
+#define ES_G (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_G))
+
+/* h */
+#define ES_H (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_H))
+
+/* i */
+#define ES_I (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_I))
+
+/* j */
+#define ES_J (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_J))
+
+/* k */
+#define ES_K (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_K))
+
+/* l */
+#define ES_L (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_L))
+
+/* m */
+#define ES_M (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_M))
+
+/* n */
+#define ES_N (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_N))
+
+/* o */
+#define ES_O (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_O))
+
+/* p */
+#define ES_P (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_P))
+
+/* q */
+#define ES_Q (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q))
+
+/* r */
+#define ES_R (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_R))
+
+/* s */
+#define ES_S (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_S))
+
+/* t */
+#define ES_T (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_T))
+
+/* u */
+#define ES_U (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_U))
+
+/* v */
+#define ES_V (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_V))
+
+/* w */
+#define ES_W (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_W))
+
+/* x */
+#define ES_X (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_X))
+
+/* y */
+#define ES_Y (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Y))
+
+/* z */
+#define ES_Z (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Z))
+
+/* { */
+#define ES_LEFT_BRACE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE)))
+#define ES_LBRC (ES_LEFT_BRACE)
+
+/* | */
+#define ES_PIPE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_1_AND_EXCLAMATION)))
+
+/* } */
+#define ES_RIGHT_BRACE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_BACKSLASH_AND_PIPE)))
+#define ES_RBRC (ES_RIGHT_BRACE)
+
+/* ~ */
+#define ES_TILDE (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_4_AND_DOLLAR)))
+
+/* ¡ */
+#define ES_INVERTED_EXCLAMATION (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_EQUAL_AND_PLUS))
+#define ES_IEXCL (ES_INVERTED_EXCLAMATION)
+
+/* ¨ */
+#define ES_UMLAUT (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE)))
+
+/* ª */
+#define ES_FEMININE_ORDINAL_INDICATOR (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE)))
+#define ES_ORDF (ES_FEMININE_ORDINAL_INDICATOR)
+
+/* ¬ */
+#define ES_NOT (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_6_AND_CARET)))
+
+/* ´ */
+#define ES_ACUTE (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE))
+
+/* · */
+#define ES_MIDDLE_DOT (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_3_AND_HASH)))
+#define ES_MIDDOT (ES_MIDDLE_DOT)
+
+/* º */
+#define ES_MASCULINE_ORDINAL_INDICATOR (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE))
+#define ES_ORDM (ES_MASCULINE_ORDINAL_INDICATOR)
+
+/* ¿ */
+#define ES_INVERTED_QUESTION (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_EQUAL_AND_PLUS)))
+#define ES_IQMARK (ES_INVERTED_QUESTION)
+
+/* ç */
+#define ES_C_CEDILLA (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_BACKSLASH_AND_PIPE))
+
+/* ñ */
+#define ES_N_TILDE (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SEMICOLON_AND_COLON))
+
+/* € */
+#define ES_EURO (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_5_AND_PERCENT)))
