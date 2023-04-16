@@ -1,4 +1,4 @@
-if SHIELD_AOKB_LEFT
+if SHIELD_AOKB_RIGHT
 
 config ZMK_KEYBOARD_NAME
     default "AOKB"
