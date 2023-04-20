@@ -138,7 +138,7 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp ES_IEXCL &labk      &rabk       &kp ES_AMPS &kp ES_CARET            &du_jk      &kp N7      &kp N8      &kp N9      &ca_ll
 &trans      &kp ES_SQT  &kp ES_MINUS &kp ES_PLUS &kp ES_EQUAL &kp ES_PIPE        &kp ES_N_TILDE &kp N4      &kp N5      &kp N6      &kp N0      &trans
-&trans      &ht_tp TI_W TI_M &kp ES_PRCNT &kp ES_ASTRK &kp ES_UNDER &kp ES_EURO    &kp ES_COMMA &kp N1      &kp N2      &kp N3      &kp ES_BSLH &trans
+&trans      &ht_tp TI_W TI_M &kp ES_PRCNT &kp ES_ASTRK &kp ES_UNDER &kp RA(E)    &kp ES_COMMA &kp N1      &kp N2      &kp N3      &kp ES_BSLH &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
