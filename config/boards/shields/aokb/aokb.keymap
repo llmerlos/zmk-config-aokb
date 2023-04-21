@@ -108,7 +108,7 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp ES_SEMI &kp W       &kp F       &kp P       &kp B                   &kp J       &kp L       &kp U       &kp Y       &kp Q
 &kp TAB     &kp A       &kp R       &kp S       &kp T       &kp G                   &kp M       &kp N       &kp E       &kp I       &kp O       &kp RET
-&kp LCTL    &kp Z       &kp X       &kp C       &kp D       &kp V                   &kp K       &kp H       &kp ES_COMMA &kp ES_DOT  &kp ES_FSLH &kp RALT
+&kp LCTL    &kp Z       &kp X       &kp C       &kp D       &kp V                   &kp K       &kp H       &kp ES_COMMA &kp ES_DOT  &kp ES_FSLH &kp LALT
                                     &kp LWIN    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
             >;
         };
@@ -138,7 +138,7 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp ES_IEXCL &labk      &rabk       &kp ES_AMPS &kp ES_CARET            &du_jk      &kp N7      &kp N8      &kp N9      &ca_ll
 &trans      &kp ES_SQT  &kp ES_MINUS &kp ES_PLUS &kp ES_EQUAL &kp ES_PIPE        &kp ES_N_TILDE &kp N4      &kp N5      &kp N6      &kp N0      &trans
-&trans      &ht_tp TI_W TI_M &kp ES_PRCNT &kp ES_ASTRK &kp ES_UNDER &kp RA(E)    &kp ES_COMMA &kp N1      &kp N2      &kp N3      &kp ES_BSLH &trans
+&trans      &kp RA(E)   &kp ES_PRCNT &kp ES_ASTRK &kp ES_UNDER &ht_tp TI_W TI_M     &kp ES_COMMA &kp N1      &kp N2      &kp N3      &kp ES_BSLH &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
@@ -158,7 +158,7 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                  &kp PG_UP   &to _GAME   &kp DSC_DFN &kp DSC_EXT &kp INS
 &trans      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10                 &none       &to _BASE   &kp DSC_MUT &kp DSC_SSC &ht_tp SS_W SS_M   &trans
-&trans      &kp F11     &kp F12     &kp PSCRN   &kp SLCK    &kp PAUSE_BREAK         &kp PG_DN   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_CLR &out OUT_TOG    &trans
+&trans      &kp F11     &kp F12     &kp PSCRN   &kp SLCK    &kp PAUSE_BREAK         &kp PG_DN   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_CLR &out OUT_TOG    &kp RALT
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
