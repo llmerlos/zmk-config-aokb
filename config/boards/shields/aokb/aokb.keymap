@@ -136,9 +136,9 @@
         lower_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp ES_IEXCL &labk      &rabk       &kp ES_AMPS &kp ES_CARET            &du_jk      &kp N7      &kp N8      &kp N9      &ca_ll
-&trans      &kp ES_SQT  &kp ES_MINUS &kp ES_PLUS &kp ES_EQUAL &kp ES_PIPE        &kp ES_N_TILDE &kp N4      &kp N5      &kp N6      &kp N0      &trans
-&trans      &kp RA(E)   &kp ES_PRCNT &kp ES_ASTRK &kp ES_UNDER &ht_tp TI_W TI_M     &kp ES_COMMA &kp N1      &kp N2      &kp N3      &kp ES_BSLH &trans
+            &kp ES_IEXCL &labk      &rabk       &kp ES_AMPS &kp ES_PIPE            &du_jk      &kp N7      &kp N8      &kp N9      &ca_ll
+&trans      &kp ES_SQT  &kp ES_MINUS &kp ES_PLUS &kp ES_EQUAL &kp ES_EXCL        &kp ES_N_TILDE &kp N4      &kp N5      &kp N6      &kp N0      &trans
+&trans      &kp ES_CARET &kp ES_PRCNT &kp ES_ASTRK &kp ES_UNDER &ht_tp TI_W TI_M     &kp ES_COMMA &kp N1      &kp N2      &kp N3      &kp ES_BSLH &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
@@ -146,9 +146,9 @@
         raise_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp RG(Q)   &kp HOME    &kp UP      &kp END     &kp ES_ORDF            &kp ES_QMARK &kp ES_LBKT &kp ES_RBKT &kp ES_HASH &kp ES_IQMARK
-&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp ES_ORDM             &kp ES_EXCL &kp ES_LPAR &kp ES_RPAR &kp ES_COLON &kp ES_DQT &trans
-&trans      &kp DEL     &kp ES_GRAVE &kp ES_C_CEDILLA &kp ES_ACUTE &kp ES_UMLAUT    &kp ES_AT   &kp ES_LBRC &kp ES_RBRC &kp ES_DLLR &kp CLCK    &trans
+            &kp RG(Q)   &kp HOME    &kp UP      &kp END     &kp ES_ORDF             &kp INS     &kp ES_LBKT &kp ES_RBKT &kp ES_HASH &kp ES_IQMARK
+&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp ES_ORDM            &kp ES_QMARK &kp ES_LPAR &kp ES_RPAR &kp ES_COLON &kp ES_DQT &trans
+&trans      &kp DEL     &kp ES_GRAVE &kp ES_C_CEDILLA &kp ES_ACUTE &kp ES_UMLAUT    &kp ES_AT   &kp ES_LBRC &kp ES_RBRC &kp ES_DLLR &kp RA(E)   &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
@@ -156,9 +156,9 @@
         adjust_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                  &kp PG_UP   &to _GAME   &kp DSC_DFN &kp DSC_EXT &kp INS
-&trans      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10                 &none       &to _BASE   &kp DSC_MUT &kp DSC_SSC &ht_tp SS_W SS_M   &trans
-&trans      &kp F11     &kp F12     &kp PSCRN   &kp SLCK    &kp PAUSE_BREAK         &kp PG_DN   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_CLR &out OUT_TOG    &kp RALT
+            &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                  &kp PG_UP   &to _GAME   &kp DSC_DFN &kp DSC_EXT &kp CLCK
+&trans      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10                 &kp PG_DN   &to _BASE   &kp DSC_MUT &kp DSC_SSC &ht_tp SS_W SS_M   &trans
+&trans      &kp F11     &kp F12     &kp PSCRN   &kp SLCK    &kp PAUSE_BREAK         &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &out OUT_TOG    &kp RALT
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
