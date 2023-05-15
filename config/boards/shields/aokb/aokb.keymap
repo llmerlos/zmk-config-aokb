@@ -10,7 +10,8 @@
 #define _GNUM   3
 #define _LOWER  4
 #define _RAISE  5
-#define _ADJUST 6
+#define _FUNCT  6
+#define _ADJUST 7
 
 #define DSC_MUT LS(LC(F9))
 #define DSC_DFN LS(LC(F11))
@@ -45,16 +46,6 @@
                 ;
         };
 
-        du_jk: du_jk {
-            label = "du_jk";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp J>
-                , <&macro_tap &kp K>
-                ;
-        };
-
         ca_ll: ca_ll {
             label = "ca_ll";
             compatible = "zmk,behavior-macro";
@@ -62,16 +53,6 @@
             bindings
                 = <&macro_tap &kp ES_MIDDOT>
                 , <&macro_tap &kp L>
-                ;
-        };
-
-        vim_tcmd: vim_tcmd {
-            label = "vim_tcmd";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp ES_COLON>
-                , <&macro_tap &kp ES_EXCL>
                 ;
         };
 
@@ -109,8 +90,8 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp ES_SEMI &kp W       &kp F       &kp P       &kp B                   &kp J       &kp L       &kp U       &kp Y       &kp Q
 &kp TAB     &kp A       &kp R       &kp S       &kp T       &kp G                   &kp M       &kp N       &kp E       &kp I       &kp O       &kp RET
-&kp LCTL    &kp Z       &kp X       &kp C       &kp D       &kp V                   &kp K       &kp H       &kp ES_COMMA &kp ES_DOT  &kp ES_FSLH &kp LALT
-                                    &kp LWIN    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
+&kp LWIN    &kp Z       &kp X       &kp C       &kp D       &kp V                   &kp K       &kp H       &kp ES_COMMA &kp ES_DOT  &kp ES_FSLH &kp LALT
+                                    &kp LCTL    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
             >;
         };
 
@@ -119,8 +100,8 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp Q       &kp W       &kp E       &kp R       &kp T                   &kp Y       &kp U       &kp I       &kp O       &kp P
 &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G                   &kp H       &kp J       &kp K       &kp L       &kp ES_SEMI &kp RET
-&kp LCTL    &kp Z       &kp X       &kp C       &kp V       &kp B                   &kp N       &kp M       &kp ES_COMMA &kp ES_DOT  &kp ES_FSLH &kp LALT
-                                    &kp LWIN    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
+&kp LWIN    &kp Z       &kp X       &kp C       &kp V       &kp B                   &kp N       &kp M       &kp ES_COMMA &kp ES_DOT  &kp ES_FSLH &kp LALT
+                                    &kp LCTL    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
             >;
         };
 
@@ -137,9 +118,9 @@
         gnum_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp N0      &kp N1      &kp T       &kp N4      &kp N7                  &trans      &trans      &trans      &trans      &trans
-&trans      &trans      &kp N2      &kp G       &kp N5      &kp N8                  &trans      &trans      &trans      &trans      &trans      &kp LA(F4)
-&trans      &trans      &kp N3      &kp B       &kp N6      &kp N9                  &trans      &trans      &trans      &trans      &trans      &trans
+            &kp N0      &kp N7      &kp T       &kp N1      &kp N2                  &trans      &trans      &trans      &trans      &trans
+&trans      &trans      &kp N8      &kp G       &kp N3      &kp N4                  &trans      &trans      &trans      &trans      &trans      &kp LA(F4)
+&trans      &trans      &kp N9      &kp B       &kp N5      &kp N6                  &trans      &trans      &trans      &trans      &trans      &trans
                                     &trans      &trans      &trans                  &trans      &trans      &trans
             >;
         };
@@ -147,9 +128,9 @@
         lower_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp ES_IEXCL &labk      &rabk       &kp ES_AMPS &kp ES_PIPE            &du_jk      &kp N7      &kp N8      &kp N9      &ca_ll
+            &kp ES_IEXCL &labk      &rabk       &kp ES_AMPS &kp ES_PIPE             &kp ES_ORDF &kp N7      &kp N8      &kp N9      &ca_ll
 &trans      &kp ES_SQT  &kp ES_MINUS &kp ES_PLUS &kp ES_EQUAL &kp ES_EXCL        &kp ES_N_TILDE &kp N4      &kp N5      &kp N6      &kp N0      &trans
-&trans      &kp ES_CARET &kp ES_PRCNT &kp ES_ASTRK &kp ES_UNDER &ht_tp TI_W TI_M     &kp ES_COMMA &kp N1      &kp N2      &kp N3      &kp ES_BSLH &trans
+&trans      &kp ES_CARET &kp ES_PRCNT &kp ES_ASTRK &kp ES_UNDER &ht_tp TI_W TI_M   &kp ES_COMMA &kp N1      &kp N2      &kp N3      &kp ES_BSLH &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
@@ -157,9 +138,19 @@
         raise_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp RG(Q)   &kp HOME    &kp UP      &kp END     &kp ES_ORDF             &kp INS     &kp ES_LBKT &kp ES_RBKT &kp ES_HASH &kp ES_IQMARK
-&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp ES_ORDM            &kp ES_QMARK &kp ES_LPAR &kp ES_RPAR &kp ES_COLON &kp ES_DQT &trans
-&trans      &kp DEL     &kp ES_GRAVE &kp ES_C_CEDILLA &kp ES_ACUTE &kp ES_UMLAUT    &kp ES_AT   &kp ES_LBRC &kp ES_RBRC &kp ES_DLLR &kp RA(E)   &trans
+   &ht_tp LA(F4) RG(Q)  &kp HOME    &kp UP      &kp END     &kp INS                 &kp ES_ORDM &kp ES_LBKT &kp ES_RBKT &kp ES_HASH &kp ES_IQMARK
+&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp DEL                 &kp ES_QMARK &kp ES_LPAR &kp ES_RPAR &kp ES_COLON &kp ES_DQT &trans
+&trans      &mo _FUNCT  &kp ES_GRAVE &kp ES_C_CEDILLA &kp ES_ACUTE &kp ES_UMLAUT    &kp ES_AT   &kp ES_LBRC &kp ES_RBRC &kp ES_DLLR &kp RA(E)   &trans
+                                    &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
+            >;
+        };
+
+        funct_layer {
+            bindings = <
+//          |           |           |           |           |           |           |           |           |           |           |           |           |           
+            &trans      &trans      &trans      &trans      &trans                  &kp SLCK    &kp F7      &kp F8      &kp F9      &kp F12
+&trans      &trans     &kp LC(LEFT) &kp LC(UP)  &kp LC(RIGHT) &trans                &kp PSCRN   &kp F4      &kp F5      &kp F6      &kp F11     &trans
+&trans      &trans      &trans      &trans      &trans      &trans              &kp PAUSE_BREAK &kp F1      &kp F2      &kp F3      &kp F10     &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
@@ -167,11 +158,13 @@
         adjust_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                  &kp PG_UP   &to _GAME   &kp DSC_SSC &kp DSC_EXT &kp CLCK
-&trans      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10                 &kp PG_DN   &to _BASE   &kp DSC_MUT &kp DSC_DFN &ht_tp SS_W SS_M   &trans
-&trans      &kp F11     &kp F12     &kp PSCRN   &kp SLCK    &kp PAUSE_BREAK         &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &to _QWER &kp RALT
+            &trans      &trans      &trans      &trans      &trans                  &kp PG_UP   &to _GAME   &kp DSC_SSC &kp DSC_EXT &kp CLCK
+&trans      &trans      &trans      &trans      &trans      &trans                  &kp PG_DN   &to _BASE   &kp DSC_MUT &kp DSC_DFN &ht_tp SS_W SS_M   &trans
+&trans      &trans      &trans      &trans      &trans      &trans                  &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &to _QWER &kp RALT
+                                    &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
+
     };
 };
 
