@@ -12,6 +12,7 @@
 #define _RAISE  5
 #define _FUNCT  6
 #define _ADJUST 7
+#define _MAC    8
 
 #define DSC_MUT LS(LC(F9))
 #define DSC_DFN LS(LC(F11))
@@ -158,10 +159,20 @@
         adjust_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &trans      &trans      &trans      &trans      &trans                  &kp PG_UP   &to _GAME   &kp DSC_SSC &kp DSC_EXT &kp CLCK
-&trans      &trans      &trans      &trans      &trans      &trans                  &kp PG_DN   &to _BASE   &kp DSC_MUT &kp DSC_DFN &ht_tp SS_W SS_M   &trans
-&trans      &trans      &trans      &trans      &trans      &trans                  &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &to _QWER &kp RALT
-                                    &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
+            &trans      &kp DSC_DFN &kp DSC_MUT &kp C_MUTE  &kp C_VOL_UP            &kp PG_UP   &to _GAME   &to _MAC    &kp DSC_EXT &kp CLCK
+&trans      &trans      &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_VOL_DN            &kp PG_DN   &to _BASE   &to _QWER   &kp DSC_SSC &ht_tp SS_W SS_M   &trans
+&kp RWIN    &trans      &trans      &trans      &trans      &trans                  &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans   &kp RALT
+                                    &kp RCTL    &trans      &mo _RAISE              &mo _LOWER  &trans      &kp LSFT
+            >;
+        };
+
+        mac_layer {
+            bindings = <
+//          |           |           |           |           |           |           |           |           |           |           |           |           |           
+            &trans      &trans      &trans      &trans      &trans                  &trans      &trans      &trans      &trans      &trans
+&trans      &trans      &trans      &trans      &trans      &trans                  &trans      &trans      &trans      &trans      &trans      &trans
+&kp LCTL    &trans      &trans      &trans      &trans      &trans                  &trans      &trans      &trans      &trans      &trans      &kp LALT
+                                    &kp LWIN    &trans      &trans                  &trans      &trans      &kp RSFT
             >;
         };
 
