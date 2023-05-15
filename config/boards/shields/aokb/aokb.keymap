@@ -140,7 +140,7 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
    &ht_tp LA(F4) RG(Q)  &kp HOME    &kp UP      &kp END     &kp INS      &ht_tp ES_ORDM ES_ORDF &kp ES_LBKT &kp ES_RBKT &kp ES_HASH &kp ES_IQMARK
 &trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp DEL                 &kp ES_QMARK &kp ES_LPAR &kp ES_RPAR &kp ES_COLON &kp ES_DQT &trans
-&trans      &mo _FUNCT  &kp ES_GRAVE &kp ES_C_CEDILLA &kp ES_ACUTE &kp ES_UMLAUT    &kp ES_AT   &kp ES_LBRC &kp ES_RBRC &kp ES_DLLR &kp ES_BLSH &trans
+&trans      &mo _FUNCT  &kp ES_GRAVE &kp ES_C_CEDILLA &kp ES_ACUTE &kp ES_UMLAUT    &kp ES_AT   &kp ES_LBRC &kp ES_RBRC &kp ES_DLLR &kp ES_BSLH &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
