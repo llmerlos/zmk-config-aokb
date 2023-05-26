@@ -6,12 +6,13 @@
 
 #define _BASE   0
 #define _QWER   1
-#define _GAME   2
-#define _GNUM   3
-#define _LOWER  4
-#define _RAISE  5
-#define _FUNCT  6
-#define _ADJUST 7
+#define _RMOD   2
+#define _GAME   3
+#define _GNUM   4
+#define _LOWER  5
+#define _RAISE  6
+#define _FUNCT  7
+#define _ADJUST 8
 
 #define DSC_MUT LS(LC(F9))
 #define DSC_DFN LS(LC(F11))
@@ -23,6 +24,8 @@
 
 #define TI_W    RA(N4)
 #define TI_M    RA(ES_N_TILDE)
+
+#define FNZN(n) LC(LG(LA(n)))
 
 / {
     macros {
@@ -110,8 +113,8 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp ES_SEMI &kp W       &kp F       &kp P       &kp B                   &kp J       &kp L       &kp U       &kp Y       &kp Q
 &kp TAB     &kp A       &kp R       &kp S       &kp T       &kp G                   &kp M       &kp N       &kp E       &kp I       &kp O       &kp RET
-&kp LCTL    &kp Z       &kp X       &kp C       &kp D       &kp V                   &kp K       &kp H      &kp ES_COMMA &kp ES_DOT  &kp ES_FSLH &kp LALT
-                                    &kp LWIN    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
+&kp LWIN    &kp Z       &kp X       &kp C       &kp D       &kp V                   &kp K       &kp H      &kp ES_COMMA &kp ES_DOT  &kp ES_FSLH &kp LALT
+                                    &kp LCTL    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
             >;
         };
 
@@ -120,8 +123,18 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp Q       &kp W       &kp E       &kp R       &kp T                   &kp Y       &kp U       &kp I       &kp O       &kp P
 &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G                   &kp H       &kp J       &kp K       &kp L       &kp ES_SEMI &kp RET
-&kp LCTL    &kp Z       &kp X       &kp C       &kp V       &kp B                   &kp N       &kp M      &kp ES_COMMA &kp ES_DOT  &kp ES_FSLH &kp LALT
-                                    &kp LWIN    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
+&kp LWIN    &kp Z       &kp X       &kp C       &kp V       &kp B                   &kp N       &kp M      &kp ES_COMMA &kp ES_DOT  &kp ES_FSLH &kp LALT
+                                    &kp LCTL    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
+            >;
+        };
+
+        revmod_layer {
+            bindings = <
+//          |           |           |           |           |           |           |           |           |           |           |           |           |           
+            &trans      &trans      &trans      &trans      &trans                  &trans      &trans      &trans      &trans      &trans
+&trans      &trans      &trans      &trans      &trans      &trans                  &trans      &trans      &trans      &trans      &trans      &trans
+&kp LCTL    &trans      &trans      &trans      &trans      &trans                  &trans      &trans      &trans      &trans      &trans      &trans
+                                    &kp LWIN    &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
 
@@ -179,8 +192,8 @@
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &none       &none       &none       &none       &none                   &kp PG_UP   &to _GAME   &none       &none       &none 
-&trans      &none       &none       &none       &none       &none                   &kp PG_DN   &to _BASE   &none       &none       &none       &trans
-&kp RCTL    &none       &none       &none       &none       &none                   &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &to _QWER &kp RALT
+&trans      &none       &none       &none       &none       &none                   &kp PG_DN   &to _BASE   &tog _RMOD  &none       &none       &trans
+&kp RCTL    &kp FZN(N4) &kp FZN(N3) &kp FZN(N2) &kp FZN(N1) &none                   &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &to _QWER &kp RALT
                                     &kp RWIN    &trans      &mo _RAISE              &mo _LOWER  &trans      &kp LSFT
             >;
         };
