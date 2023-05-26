@@ -25,7 +25,7 @@
 #define TI_W    RA(N4)
 #define TI_M    RA(ES_N_TILDE)
 
-#define FNZN(n) LC(LG(LA(n)))
+#define FZN(n) LC(LG(LA(n)))
 
 / {
     macros {
