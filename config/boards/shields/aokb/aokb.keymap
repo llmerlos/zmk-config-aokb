@@ -152,8 +152,8 @@
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &trans      &kp N1      &trans      &kp N2      &kp N3                  &trans      &trans      &trans      &trans      &trans
-&trans      &trans      &trans      &trans      &trans      &kp G                   &trans      &trans      &trans      &trans      &trans      &kp LA(F4)
-&kp T       &trans      &trans      &trans      &kp N4      &kp N5                  &trans      &trans      &trans      &trans      &trans      &trans
+&trans      &trans      &trans      &trans      &trans      &trans                  &trans      &trans      &trans      &trans      &trans      &kp LA(F4)
+&trans      &trans      &kp T       &kp G       &kp N4      &kp N5                  &trans      &trans      &trans      &trans      &trans      &trans
                                     &trans      &trans      &trans                  &trans      &trans      &trans
             >;
         };
