@@ -6,12 +6,13 @@
 
 #define _BASE   0
 #define _QWER   1
-#define _GAME   2
-#define _GNUM   3
-#define _LOWER  4
-#define _RAISE  5
-#define _FUNCT  6
-#define _ADJUST 7
+#define _RMOD   2
+#define _GAME   3
+#define _GNUM   4
+#define _LOWER  5
+#define _RAISE  6
+#define _FUNCT  7
+#define _ADJUST 8
 
 #define DSC_MUT LS(LC(F9))
 #define DSC_DFN LS(LC(F11))
@@ -116,8 +117,8 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp ES_SEMI &kp W       &kp F       &kp P       &kp B                   &kp J       &kp L       &kp U       &kp Y       &kp Q
 &kp TAB     &kp A       &kp R       &kp S       &kp T       &kp G                   &kp M       &kp N       &kp E       &kp I       &kp O       &kp RET
-&kp LCTL    &kp Z       &kp X       &kp C       &kp D       &kp V                   &kp K       &kp H      &kp ES_COMMA &kp ES_DOT  &kp ES_FSLH &kp LALT
-                                    &kp LWIN    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
+&kp LWIN    &kp Z       &kp X       &kp C       &kp D       &kp V                   &kp K       &kp H      &kp ES_COMMA &kp ES_DOT  &kp ES_FSLH &kp LALT
+                                    &kp LCTL    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
             >;
         };
 
@@ -126,8 +127,18 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp Q       &kp W       &kp E       &kp R       &kp T                   &kp Y       &kp U       &kp I       &kp O       &kp P
 &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G                   &kp H       &kp J       &kp K       &kp L       &kp ES_SEMI &kp RET
-&kp LCTL    &kp Z       &kp X       &kp C       &kp V       &kp B                   &kp N       &kp M      &kp ES_COMMA &kp ES_DOT  &kp ES_FSLH &kp LALT
-                                    &kp LWIN    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
+&kp LWIN    &kp Z       &kp X       &kp C       &kp V       &kp B                   &kp N       &kp M      &kp ES_COMMA &kp ES_DOT  &kp ES_FSLH &kp LALT
+                                    &kp LCTL    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
+            >;
+        };
+
+        revmod_layer {
+            bindings = <
+//          |           |           |           |           |           |           |           |           |           |           |           |           |           
+            &trans      &trans      &trans      &trans      &trans                  &trans      &trans      &trans      &trans      &trans
+&trans      &trans      &trans      &trans      &trans      &trans                  &trans      &trans      &trans      &trans      &trans      &trans
+&kp LCTL    &trans      &trans      &trans      &trans      &trans                  &trans      &trans      &trans      &trans      &trans      &trans
+                                    &kp LWIN    &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
 
@@ -174,9 +185,9 @@
         funct_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp SLCK    &kp DSC_SSC &kp LS(N3)  &kp LS(N1)  &kp CLCK                &kp F12     &kp F7      &kp F8      &kp F9      &kp PAUSE_BREAK
-&trans      &kp PSCRN   &kp VD_L    &kp VD_U    &kp VD_R    &kp PG_UP               &kp F11     &kp F4      &kp F5      &kp F6 &ht_tp SS_W SS_M &trans
-&trans      &trans      &none       &kp DSC_DFN &kp DSC_MUT &kp PG_DN               &kp F10     &kp F1      &kp F2      &kp F3      &trans      &trans
+            &kp SLCK    &none       &kp LS(N3)  &kp LS(N1)  &kp CLCK                &kp F12     &kp F7      &kp F8      &kp F9      &kp PAUSE_BREAK
+&trans      &kp PSCRN   &kp LC(LEFT) &kp LC(BSPC) &kp LC(RIGHT) &kp PG_UP           &kp F11     &kp F4      &kp F5      &kp F6 &ht_tp SS_W SS_M &trans
+&trans      &trans      &kp VD_L    &kp VD_U    &kp VD_R    &kp PG_DN               &kp F10     &kp F1      &kp F2      &kp F3      &trans      &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
@@ -184,13 +195,12 @@
         adjust_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &none       &none       &none       &none       &kp C_VOL_UP            &kp CLCK    &to _GAME   &none       &none       &none     
-&trans      &none       &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_VOL_DN            &to _QWER   &to _BASE   &none       &none       &none       &trans
+            &none       &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_VOL_UP            &to _QWER   &to _GAME   &none       &none       &none     
+&trans      &kp CLCK    &kp DSC_SSC &kp DSC_DFN &kp DSC_MUT &kp C_VOL_DN            &to _RMOD   &to _BASE   &none       &none       &none       &trans
 &kp RCTL    &kp FZN(N4) &kp FZN(N3) &kp FZN(N2) &kp FZN(N1) &kp C_MUTE              &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none    &kp RALT
                                     &kp RWIN    &trans      &mo _RAISE              &mo _LOWER  &trans      &kp LSFT
             >;
         };
-
     };
 };
 
