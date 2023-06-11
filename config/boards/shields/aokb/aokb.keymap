@@ -167,8 +167,8 @@
         raise_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp VD_L    &kp HOME    &kp UP      &kp END     &kp VD_R              &kp ES_UMLAUT &kp ES_LBKT &kp ES_RBKT &kp ES_HASH &kp ES_IQMARK
-&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp VD_U                &kp ES_QMARK &kp ES_LPAR &kp ES_RPAR &kp ES_COLON &kp ES_DQT &trans
+            &kp VD_L    &kp HOME    &kp UP      &kp END     &kp VD_U              &kp ES_UMLAUT &kp ES_LBKT &kp ES_RBKT &kp ES_HASH &kp ES_IQMARK
+&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp VD_R                &kp ES_QMARK &kp ES_LPAR &kp ES_RPAR &kp ES_COLON &kp ES_DQT &trans
 &trans      &mo _FUNCT  &fs_grave &kp ES_C_CEDILLA &fs_acute &kp DEL                &kp ES_AT   &kp ES_LBRC &kp ES_RBRC &kp ES_DLLR &kp ES_BSLH &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
@@ -187,7 +187,7 @@
         adjust_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp CLCK     &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_VOL_UP            &kp PG_UP   &to _GAME   &none       &none       &none
+            &kp CLCK    &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_VOL_UP            &kp PG_UP   &to _GAME   &none       &none       &none
 &trans &ht_tp SS_W SS_M &kp DSC_SSC &kp DSC_DFN &kp DSC_MUT &kp C_VOL_DN            &kp PG_DN   &to _BASE   &none       &none       &to _QWER   &trans
 &kp RCTL    &kp FZN(N4) &kp FZN(N3) &kp FZN(N2) &kp FZN(N1) &kp C_MUTE              &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none    &kp RALT
                                     &kp RWIN    &trans      &mo _RAISE              &mo _LOWER  &trans      &kp LSFT
