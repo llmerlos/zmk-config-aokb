@@ -26,9 +26,13 @@
 
 #define FZN(n) LC(LG(LA(n)))
 
-#define VD_L   LC(LG(LEFT))
-#define VD_R   LC(LG(RIGHT))
-#define VD_U   LG(TAB)
+//#define VD_L   LC(LG(LEFT))
+//#define VD_R   LC(LG(RIGHT))
+//#define VD_U   LG(TAB)
+
+#define VD_L   LC(LEFT)
+#define VD_R   LC(RIGHT)
+#define VD_U   LC(UP)
 
 #define HT_OMF &ht_tp ES_ORDF ES_ORDM
 
@@ -116,9 +120,9 @@
         default_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp Q       &kp W       &kp F       &kp P       &kp B                   &kp K       &kp L       &kp U       &kp Y       &kp J 
+            &kp Q       &kp W       &kp F       &kp P       &kp B                   &kp J       &kp L       &kp U       &kp Y       &kp ES_SEMI
 &kp TAB     &kp A       &kp R       &kp S       &kp T       &kp G                   &kp M       &kp N       &kp E       &kp I       &kp O       &kp RET
-&kp LCTL    &kp Z       &kp X       &kp C       &kp D       &kp V                   &kp ES_SEMI &kp H       &kp ES_COMMA &kp ES_DOT &kp ES_FSLH &kp LALT
+&kp LCTL    &kp Z       &kp X       &kp C       &kp D       &kp V                   &kp K       &kp H       &kp ES_COMMA &kp ES_DOT &kp ES_FSLH &kp LALT
                                     &kp LWIN    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
             >;
             };
