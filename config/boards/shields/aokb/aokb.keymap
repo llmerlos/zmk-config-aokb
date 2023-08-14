@@ -23,7 +23,7 @@
 #define VD_U   LG(TAB)
 
 #define S_SS    LG(RS(S))
-#define SmSS    LG(RS(S))
+#define SmSS    LG(RS(N4))
 
 #define E_IEX   RA(N1)
 #define E_IQM   RA(FSLH)
