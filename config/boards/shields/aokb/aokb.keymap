@@ -112,7 +112,7 @@
 &kp TAB     &kp A       &kp R       &kp S       &kp T       &kp G                   &kp M       &kp N       &kp E       &kp I       &kp O       &kp RET
 &kp LCTL    &kp Z       &kp X       &kp C       &kp D       &kp V                   &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp LALT
                                     &kp LWIN    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
-            >;
+            >g
             };
 
         qwerty_layer {
@@ -151,7 +151,7 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp E_IEX   &kp LT      &kp GT      &kp AMPS    &kp PIPE                &kp E_EUR   &kp N7      &kp N8      &kp N9      &kp E_LL
 &trans      &kp SQT     &kp MINUS   &kp PLUS    &kp EQUAL   &kp EXCL                &kp GRAVE   &kp N4      &kp N5      &kp N6      &kp N0      &trans
-&trans      &kp CARET   &kp PRCNT   &kp ASTRK   &kp UNDER   &kp TILDE               &kp ES_NN   &kp N1      &kp N2      &kp N3      &mo _FUNCT  &kp RALT 
+&trans      &kp CARET   &kp PRCNT   &kp ASTRK   &kp UNDER   &kp TILDE               &kp E_NN    &kp N1      &kp N2      &kp N3      &mo _FUNCT  &kp RALT 
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
