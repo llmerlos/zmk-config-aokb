@@ -103,7 +103,7 @@
 &kp LCTL    &kp X       &kp Q       &kp C       &kp D       &kp V                   &kp SEMI    &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp LALT
                                     &kp LWIN    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
             >;
-            };
+        };
 
         colemak_layer {
             bindings = <
@@ -112,8 +112,8 @@
 &kp TAB     &kp A       &kp R       &kp S       &kp T       &kp G                   &kp M       &kp N       &kp E       &kp I       &kp O       &kp RET
 &kp LCTL    &kp Z       &kp X       &kp C       &kp D       &kp V                   &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp LALT
                                     &kp LWIN    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
-            >g
-            };
+            >;
+        };
 
         qwerty_layer {
             bindings = <
