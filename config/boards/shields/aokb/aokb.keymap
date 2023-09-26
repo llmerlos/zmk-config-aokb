@@ -149,7 +149,7 @@
         lower_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp E_IQM   &kp LT      &kp GT      &kp AMPS    &kp PIPE                &kp BLSH    &kp LBKT    &kp RBKT    &kp HASH    &kp E_IEX             
+            &kp E_IQM   &kp LT      &kp GT      &kp AMPS    &kp PIPE                &kp BSLH    &kp LBKT    &kp RBKT    &kp HASH    &kp E_IEX             
 &trans      &kp SQT     &kp MINUS   &kp PLUS    &kp EQUAL   &kp QMARK               &kp EXCL    &kp LPAR    &kp RPAR    &kp COLON   &kp DQT     &trans    
 &trans      &kp CARET   &kp PRCNT   &kp ASTRK   &kp UNDER   &kp TILDE               &kp AT      &kp LBRC    &kp RBRC    &kp DLLR    &mo _FUNCT  &kp RALT  
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans                                        
@@ -197,11 +197,3 @@
         };
     };
 };
-
-
-
-
-
-
-
-
