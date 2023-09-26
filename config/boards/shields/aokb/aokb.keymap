@@ -4,14 +4,13 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define _BASE   0
-#define _CLMK   1
-#define _QWER   2
-#define _GAME   3
-#define _GNUM   4
-#define _LOWER  5
-#define _RAISE  6
-#define _FUNCT  7
-#define _ADJUST 8
+#define _QWER   1
+#define _GAME   2
+#define _GNUM   3
+#define _LOWER  4
+#define _RAISE  5
+#define _FUNCT  6
+#define _ADJUST 7
 
 #define D_MUT LS(LC(F9))
 #define D_SIL LS(LC(F11))
@@ -105,16 +104,6 @@
             >;
         };
 
-        colemak_layer {
-            bindings = <
-//          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp Q       &kp W       &kp F       &kp P       &kp B                   &kp J       &kp L       &kp U       &kp Y       &kp SEMI   
-&kp TAB     &kp A       &kp R       &kp S       &kp T       &kp G                   &kp M       &kp N       &kp E       &kp I       &kp O       &kp RET
-&kp LCTL    &kp Z       &kp X       &kp C       &kp D       &kp V                   &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp LALT
-                                    &kp LWIN    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
-            >;
-        };
-
         qwerty_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
@@ -149,7 +138,7 @@
         lower_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp E_IQM   &kp LT      &kp GT      &kp AMPS    &kp PIPE                &kp BSLH    &kp LBKT    &kp RBKT    &kp HASH    &kp E_IEX             
+            &kp GRAVE   &kp LT      &kp GT      &kp AMPS    &kp PIPE                &kp E_EUR   &kp LBKT    &kp RBKT    &kp HASH    &kp BSLH            
 &trans      &kp SQT     &kp MINUS   &kp PLUS    &kp EQUAL   &kp QMARK               &kp EXCL    &kp LPAR    &kp RPAR    &kp COLON   &kp DQT     &trans    
 &trans      &kp CARET   &kp PRCNT   &kp ASTRK   &kp UNDER   &kp TILDE               &kp AT      &kp LBRC    &kp RBRC    &kp DLLR    &mo _FUNCT  &kp RALT  
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans                                        
@@ -159,9 +148,9 @@
         raise_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp VD_L    &kp HOME    &kp UP      &kp END     &kp VD_U                &kp E_EUR   &kp N7      &kp N8      &kp N9      &kp E_LL              
-&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp VD_R                &kp GRAVE   &kp N4      &kp N5      &kp N6      &kp N0      &trans    
-&trans      &mo _FUNCT  &fs_ob      &kp E_CC    &fs_tc      &kp DEL                 &kp E_NN    &kp N1      &kp N2      &kp N3      &kp E_ADI   &kp RALT  
+            &kp VD_L    &kp HOME    &kp UP      &kp END     &kp VD_U                &kp MINUS   &kp N7      &kp N8      &kp N9      &kp PLUS              
+&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp VD_R                &kp DOT     &kp N4      &kp N5      &kp N6      &kp N0      &trans    
+&trans      &mo _FUNCT  &fs_ob      &kp E_CC    &fs_tc      &kp DEL                 &kp COMMA   &kp N1      &kp N2      &kp N3      &kp ASTRK   &kp RALT  
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans                                        
             >;
         };
@@ -170,8 +159,8 @@
                             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp INS &kp PAUSE_BREAK &kp E_OF    &kp E_OM    &kp E_DEG               &kp F12     &kp F7      &kp F8      &kp F9      &kp F11
-&trans      &kp PSCRN   &kp SLCK    &none       &none       &none                   &kp E_SMT   &kp F4      &kp F5      &kp F6      &kp F10     &trans
-&trans      &trans      &none       &none       &none       &none                   &kp E_SLI   &kp F1      &kp F2      &kp F3      &trans      &trans
+&trans      &kp PSCRN   &kp SLCK    &kp E_LL    &kp E_IEX   &kp E_IQM               &kp E_SMT   &kp F4      &kp F5      &kp F6      &kp F10     &trans
+&trans      &trans      &kp E_ADI   &kp E_NN    &none       &none                   &kp E_SLI   &kp F1      &kp F2      &kp F3      &trans      &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
@@ -179,9 +168,9 @@
         adjust_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp CAPS    &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_VOL_UP            &kp PG_UP   &to _GAME   &none       &none       &to _CLMK
+            &kp CAPS    &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_VOL_UP            &kp PG_UP   &to _GAME   &none       &none       &none
 &trans    &ht S_SS SmSS &kp D_SHS   &kp D_SIL   &kp D_MUT   &kp C_VOL_DN            &kp PG_DN   &to _BASE   &none       &none       &to _QWER   &trans
-&kp RCTL    &kp FZN(N4) &kp FZN(N3) &kp FZN(N2) &kp FZN(N1) &kp C_MUTE              &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none    &kp RALT
+&kp RCTL    &kp FZN(N4) &kp FZN(N3) &kp FZN(N2) &kp FZN(N1) &kp C_MUTE              &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp RALT
                                     &kp RWIN    &trans      &mo _RAISE              &mo _LOWER  &trans      &kp LSFT
             >;
         };
