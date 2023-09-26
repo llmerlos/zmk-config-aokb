@@ -38,7 +38,7 @@
 
 #define E_AOB   RA(GRAVE)
 #define E_ATC   RA(SQT)
-#define E_ACF   RA(CARET)
+#define E_ACF   RA(N6)
 #define E_ADI   RA(RS(DQT))
 
 #define E_SMT   RA(RS(M))
