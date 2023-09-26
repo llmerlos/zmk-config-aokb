@@ -38,6 +38,7 @@
 
 #define E_AOB   RA(GRAVE)
 #define E_ATC   RA(SQT)
+#define E_ACF   RA(CARET)
 #define E_ADI   RA(RS(DQT))
 
 #define E_SMT   RA(RS(M))
@@ -138,9 +139,9 @@
         lower_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp GRAVE   &kp LT      &kp GT      &kp AMPS    &kp PIPE                &kp E_EUR   &kp LBKT    &kp RBKT    &kp HASH    &kp BSLH            
-&trans      &kp SQT     &kp MINUS   &kp PLUS    &kp EQUAL   &kp QMARK               &kp EXCL    &kp LPAR    &kp RPAR    &kp COLON   &kp DQT     &trans    
-&trans      &kp CARET   &kp PRCNT   &kp ASTRK   &kp UNDER   &kp TILDE               &kp AT      &kp LBRC    &kp RBRC    &kp DLLR    &mo _FUNCT  &kp RALT  
+            &kp GRAVE   &kp LT      &kp GT      &kp AMPS    &kp PIPE                &kp DOT     &kp N7      &kp N8      &kp N9      &kp FSLH              
+&trans      &kp SQT     &kp MINUS   &kp PLUS    &kp EQUAL   &kp QMARK               &kp E_NN    &kp N4      &kp N5      &kp N6      &kp N0      &trans    
+&trans      &kp CARET   &kp PRCNT   &kp ASTRK   &kp UNDER   &kp TILDE               &kp COMMA   &kp N1      &kp N2      &kp N3      &mo _FUNCT  &kp RALT  
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans                                        
             >;
         };
@@ -148,9 +149,9 @@
         raise_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp VD_L    &kp HOME    &kp UP      &kp END     &kp VD_U                &kp MINUS   &kp N7      &kp N8      &kp N9      &kp PLUS              
-&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp VD_R                &kp DOT     &kp N4      &kp N5      &kp N6      &kp N0      &trans    
-&trans      &mo _FUNCT  &fs_ob      &kp E_CC    &fs_tc      &kp DEL                 &kp COMMA   &kp N1      &kp N2      &kp N3      &kp ASTRK   &kp RALT  
+            &kp VD_L    &kp HOME    &kp UP      &kp END     &kp VD_U                &kp E_EUR   &kp LBKT    &kp RBKT    &kp HASH    &kp EQUAL            
+&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp VD_R                &kp EXCL    &kp LPAR    &kp RPAR    &kp COLON   &kp DQT     &trans    
+&trans      &mo _FUNCT  &fs_ob      &kp E_CC    &fs_tc      &kp DEL                 &kp AT      &kp LBRC    &kp RBRC    &kp DLLR    &kp BSLH    &kp RALT  
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans                                        
             >;
         };
@@ -160,7 +161,7 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp INS &kp PAUSE_BREAK &kp E_OF    &kp E_OM    &kp E_DEG               &kp F12     &kp F7      &kp F8      &kp F9      &kp F11
 &trans      &kp PSCRN   &kp SLCK    &kp E_LL    &kp E_IEX   &kp E_IQM               &kp E_SMT   &kp F4      &kp F5      &kp F6      &kp F10     &trans
-&trans      &trans      &kp E_ADI   &kp E_NN    &none       &none                   &kp E_SLI   &kp F1      &kp F2      &kp F3      &trans      &trans
+&trans      &trans      &kp E_ADI   &kp E_ACF   &none       &none                   &kp E_SLI   &kp F1      &kp F2      &kp F3      &trans      &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
