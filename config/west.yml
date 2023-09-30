@@ -6,7 +6,7 @@ manifest:
       url-base: https://github.com/llmerlos
   projects:
     - name: zmk
-      remote: llmerlos 
+      remote: zmkfirmware 
       revision: main
       import: app/west.yml
   self:
