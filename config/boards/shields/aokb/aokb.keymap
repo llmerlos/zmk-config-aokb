@@ -159,9 +159,9 @@
         funct_layer {
                             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp INS &kp PAUSE_BREAK &kp E_OF    &kp E_OM    &kp E_DEG               &kp F12     &kp F7      &kp F8      &kp F9      &kp F11
-&trans      &kp PSCRN   &kp SLCK    &kp E_LL    &kp E_IEX   &kp E_IQM               &kp E_SMT   &kp F4      &kp F5      &kp F6      &kp F10     &trans
-&trans      &trans      &kp E_ADI   &kp E_ACF   &none       &none                   &kp E_SLI   &kp F1      &kp F2      &kp F3      &trans      &trans
+            &bootloader &kp E_DEG   &kp E_OF    &kp E_OM    &kp PG_UP               &kp F12     &kp F7      &kp F8      &kp F9      &bootloader
+&trans      &kp SLCK    &kp E_LL    &kp E_IEX   &kp E_IQM   &kp PG_DN               &kp F11     &kp F4      &kp F5      &kp F6  &kp PAUSE_BREAK &trans
+&trans      &trans      &kp E_ADI   &kp E_ACF   &kp E_SMT   &kp E_SLI               &kp F10     &kp F1      &kp F2      &kp F3      &trans      &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
@@ -169,8 +169,8 @@
         adjust_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp CAPS    &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_VOL_UP            &kp PG_UP   &to _GAME   &none       &none       &none
-&trans    &ht S_SS SmSS &kp D_SHS   &kp D_SIL   &kp D_MUT   &kp C_VOL_DN            &kp PG_DN   &to _BASE   &none       &none       &to _QWER   &trans
+            &kp CAPS    &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_VOL_UP            &kp INS     &to _GAME   &none       &none       &none
+&trans    &ht SmSS S_SS &kp D_SHS   &kp D_SIL   &kp D_MUT   &kp C_VOL_DN            &kp PSCRN   &to _BASE   &none       &none       &to _QWER   &trans
 &kp RCTL    &kp FZN(N4) &kp FZN(N3) &kp FZN(N2) &kp FZN(N1) &kp C_MUTE              &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp RALT
                                     &kp RWIN    &trans      &mo _RAISE              &mo _LOWER  &trans      &kp LSFT
             >;
