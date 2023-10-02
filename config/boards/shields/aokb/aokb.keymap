@@ -139,8 +139,8 @@
         lower_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp GRAVE   &kp LT      &kp GT      &kp AMPS    &kp PIPE                &kp DOT     &kp N7      &kp N8      &kp N9      &kp FSLH              
-&trans      &kp COLON   &kp MINUS   &kp PLUS    &kp EQUAL   &kp EXCL                &kp E_NN    &kp N4      &kp N5      &kp N6      &kp N0      &trans    
+            &kp COLON   &kp LT      &kp GT      &kp AMPS    &kp PIPE                &kp DOT     &kp N7      &kp N8      &kp N9      &kp FSLH              
+&trans      &kp SQT     &kp MINUS   &kp PLUS    &kp EQUAL   &kp EXCL                &kp E_NN    &kp N4      &kp N5      &kp N6      &kp N0      &trans    
 &trans      &kp CARET   &kp PRCNT   &kp ASTRK   &kp UNDER   &kp TILDE               &kp COMMA   &kp N1      &kp N2      &kp N3      &mo _FUNCT  &kp RALT  
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans                                        
             >;
@@ -149,9 +149,9 @@
         raise_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp VD_L    &kp HOME    &kp UP      &kp END     &kp VD_U                &kp AT      &kp LBKT    &kp RBKT    &kp HASH    &kp EQUAL            
-&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp VD_R                &kp QMARK   &kp LPAR    &kp RPAR    &kp DQT     &kp SQT     &trans    
-&trans      &mo _FUNCT  &fs_ob      &kp E_CC    &fs_tc      &kp DEL                 &kp E_EUR   &kp LBRC    &kp RBRC    &kp DLLR    &kp BSLH    &kp RALT  
+            &kp VD_L    &kp HOME    &kp UP      &kp END     &kp VD_U                &kp GRAVE   &kp LBKT    &kp RBKT    &kp HASH    &kp EQUAL            
+&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp VD_R                &kp QMARK   &kp LPAR    &kp RPAR    &kp DLLR    &kp DQT     &trans    
+&trans      &mo _FUNCT  &fs_ob      &kp E_CC    &fs_tc      &kp DEL                 &kp AT      &kp LBRC    &kp RBRC    &kp E_EUR   &kp BSLH    &kp RALT  
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans                                        
             >;
         };
