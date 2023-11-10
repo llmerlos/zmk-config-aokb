@@ -63,6 +63,16 @@
                 , <&macro_tap &kp MACRO_PLACEHOLDER>;
         };
         
+        qa: qa {
+            label = "qa";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+                = <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>,
+                , <&macro_tap &to _BASE>;
+        };
+        
         fs_ob: fs_ob {
             label = "fs_ob";
             compatible = "zmk,behavior-macro";
@@ -155,9 +165,9 @@
         raise_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp VD_L    &kp HOME    &kp UP      &kp END     &kp VD_U                &kp E_ADI   &kp LBKT    &kp RBKT    &kp HASH    &kp SEMI            
+            &kp VD_L    &kp HOME    &kp UP      &kp END     &kp VD_U                &qa E_ADI   &kp LBKT    &kp RBKT    &kp HASH    &kp SEMI            
 &trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp VD_R                &kp QMARK   &kp LPAR    &kp RPAR    &kp COLON   &kp DQT     &trans    
-&trans      &mo _FUNCT  &fs_ob      &kp E_CC    &fs_tc      &kp DEL                 &kp AT      &kp LBRC    &kp RBRC    &kp DLLR    &kp BSLH    &kp RALT
+&trans      &mo _FUNCT  &qa E_AOB   &kp E_CC    &qa E_ATC   &kp DEL                 &kp AT      &kp LBRC    &kp RBRC    &kp DLLR    &kp BSLH    &kp RALT
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
