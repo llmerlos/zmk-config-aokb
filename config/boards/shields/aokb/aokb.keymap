@@ -69,29 +69,10 @@
             #binding-cells = <1>;
             bindings
                 = <&macro_param_1to1>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>,
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
                 , <&macro_tap &to _BASE>;
         };
         
-        fs_ob: fs_ob {
-            label = "fs_ob";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp E_AOB>
-                , <&macro_tap &to _BASE>
-                ;
-        };
-        
-        fs_tc: fs_tc {
-            label = "fs_tc";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp E_ATC>
-                , <&macro_tap &to _BASE>
-                ;
-        };
     };
 };
 
