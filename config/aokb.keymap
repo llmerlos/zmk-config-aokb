@@ -157,7 +157,7 @@
                             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &bootloader &kp E_DEG   &kp PG_UP   &kp E_OM    &kp E_OF                &kp F12     &kp F7      &kp F8      &kp F9      &bootloader
-&trans      &E_IEX      &none       &kp PG_DN   &kp E_IQM   &kp E_ACF               &kp F11     &kp F4      &kp F5      &kp F6      &none       &trans
+&trans      &kp E_IEX   &none       &kp PG_DN   &kp E_IQM   &kp E_ACF               &kp F11     &kp F4      &kp F5      &kp F6      &none       &trans
 &trans      &trans      &none       &none       &kp E_SMT   &kp E_SLI               &kp F10     &kp F1      &kp F2      &kp F3      &trans      &trans
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
