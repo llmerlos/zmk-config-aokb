@@ -1,0 +1,186 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define _BASE   0
+#define _QWER   1
+#define _GAME   2
+#define _GNUM   3
+#define _LOWER  4
+#define _RAISE  5
+#define _FUNCT  6
+#define _ADJUST 7
+
+#define D_MUT LS(LC(F9))
+#define D_SIL LS(LC(F11))
+#define D_SHS LS(LC(F10))
+
+#define FZN(n) LC(LG(LA(n)))
+
+#define VD_L   LC(LG(LEFT))
+#define VD_R   LC(LG(RIGHT))
+#define VD_U   LG(TAB)
+
+#define E_IEX   RA(N1)
+#define E_IQM   RA(FSLH)
+
+#define E_NN    RA(N)
+#define E_CC    RA(C)
+#define E_LL    RA(RS(SEMI))
+#define E_OF    RA(N2)
+#define E_OM    RA(N3)
+#define E_EUR   RA(N5)
+#define E_DEG   RA(SEMI)
+
+#define E_AOB   RA(GRAVE)
+#define E_ATC   RA(SQT)
+#define E_ACF   RA(N6)
+#define E_ADI   RA(RS(DQT))
+
+#define E_SMT   RA(RS(M))
+#define E_SLI   RA(BSLH)
+
+/ {
+    macros {
+        talpha: talpha {
+            label = "talpha";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &to _BASE>
+                , <&macro_pause_for_release>
+                , <&macro_tap &to _GAME>
+                ;
+        };
+        
+        qp: qp {
+            label = "qp";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+                = <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>;
+        };
+        
+        qa: qa {
+            label = "qa";
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+                = <&macro_param_1to1>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
+                , <&macro_tap &to _BASE>;
+        };
+        
+    };
+};
+
+/ {
+    behaviors {
+        ht: ht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ht";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+//          |           |           |           |           |           |           |           |           |           |           |           |           |           
+            &kp Q       &kp W       &kp F       &kp P       &kp B                   &kp J       &kp L       &kp U       &kp Y       &kp K   
+&kp TAB     &kp A       &kp R       &kp S       &kp T       &kp G                   &kp M       &kp N       &kp E       &kp I       &kp O       &kp RET
+&kp LCTL    &kp Z       &kp X       &kp C       &kp D       &kp V                   &kp SQT     &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp LALT
+                                    &kp LWIN    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
+            >;
+        };
+
+        qwerty_layer {
+            bindings = <
+//          |           |           |           |           |           |           |           |           |           |           |           |           |           
+            &kp Q       &kp W       &kp E       &kp R       &kp T                   &kp Y       &kp U       &kp I       &kp O       &kp P
+&kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G                   &kp H       &kp J       &kp K       &kp L       &kp SQT     &kp RET
+&kp LCTL    &kp Z       &kp X       &kp C       &kp V       &kp B                   &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp LALT
+                                    &kp LWIN    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
+            >;
+        };
+
+
+        game_layer {
+            bindings = <
+//          |           |           |           |           |           |           |           |           |           |           |           |           |           
+            &kp TAB     &kp Q       &kp W       &kp E       &kp R                   &kp J       &kp L       &kp U       &kp Y       &kp K        
+&kp ESC     &kp LSFT    &kp A       &kp S       &kp D       &kp F                   &kp M       &kp N       &kp E       &kp I       &kp O       &kp RET
+&kp B       &kp LCTL    &kp Z       &kp X       &kp C       &kp V                   &kp P       &kp H       &kp VD_L    &kp VD_U    &kp VD_R    &kp LGUI
+                                    &kp LALT    &kp SPACE   &mo _GNUM               &mo _LOWER  &kp BSPC    &talpha
+            >;
+        };
+
+        gnum_layer {
+            bindings = <
+//          |           |           |           |           |           |           |           |           |           |           |           |           |           
+            &trans      &kp N1      &trans      &kp N2      &kp N3                  &trans      &trans      &kp UP      &trans      &trans
+&trans      &trans      &trans      &trans      &trans      &kp G                   &trans      &kp LEFT    &kp DOWN    &kp RIGHT   &trans      &kp LA(F4)
+&kp T       &trans      &kp N4      &trans      &kp N5      &kp N6                  &trans      &trans      &trans      &trans      &trans      &kp RALT
+                                    &trans      &trans      &trans                  &trans      &trans      &trans
+            >;
+        };
+
+        lower_layer {
+            bindings = <
+//          |           |           |           |           |           |           |           |           |           |           |           |           |           
+            &kp TILDE   &kp LT      &kp GT      &kp AMPS    &kp PIPE                &kp DOT     &kp N7      &kp N8      &kp N9      &kp E_LL              
+&trans      &kp EXCL    &kp MINUS   &qp PLUS    &qp EQUAL   &kp CARET               &kp E_NN    &kp N4      &kp N5      &kp N6      &kp N0      &trans    
+&trans      &kp GRAVE   &kp FSLH    &kp ASTRK   &kp UNDER   &kp PRCNT               &kp COMMA   &kp N1      &kp N2      &kp N3      &mo _FUNCT  &kp RALT
+                                    &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
+            >;
+        };
+
+        raise_layer {
+            bindings = <
+//          |           |           |           |           |           |           |           |           |           |           |           |           |           
+            &kp VD_L    &kp HOME    &kp UP      &kp END     &kp VD_U                &qa E_ADI   &kp LBKT    &kp RBKT    &kp HASH    &kp SEMI            
+&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp VD_R                &kp QMARK   &kp LPAR    &kp RPAR    &kp COLON   &kp DQT     &trans    
+&trans      &mo _FUNCT  &qa E_AOB   &kp E_CC    &qa E_ATC   &kp DEL                 &kp AT      &kp LBRC    &kp RBRC    &kp DLLR    &kp BSLH    &kp RALT
+                                    &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
+            >;
+        };
+
+        funct_layer {
+                            bindings = <
+//          |           |           |           |           |           |           |           |           |           |           |           |           |           
+            &bootloader &kp E_DEG   &kp PG_UP   &kp E_OM    &kp E_OF                &kp F12     &kp F7      &kp F8      &kp F9      &bootloader
+&trans      &E_IEX      &none       &kp PG_DN   &kp E_IQM   &kp E_ACF               &kp F11     &kp F4      &kp F5      &kp F6      &none       &trans
+&trans      &trans      &none       &none       &kp E_SMT   &kp E_SLI               &kp F10     &kp F1      &kp F2      &kp F3      &trans      &trans
+                                    &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
+            >;
+        };
+
+        adjust_layer {
+            bindings = <
+//          |           |           |           |           |           |           |           |           |           |           |           |           |           
+            &kp K_APP   &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_VOL_UP            &kp INS     &to _GAME   &kp PSCRN   &kp SLCK    &kp PAUSE_BREAK
+&trans      &kp CAPS    &kp D_SHS   &kp D_SIL   &kp D_MUT   &kp C_VOL_DN            &to _QWER   &to _BASE   &none       &none       &none       &trans
+&kp RCTL    &kp FZN(N4) &kp FZN(N3) &kp FZN(N2) &kp FZN(N1) &kp C_MUTE              &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp RALT
+                                    &kp RWIN    &trans      &mo _RAISE              &mo _LOWER  &trans      &kp LSFT
+            >;
+        };
+    };
+};
+
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <_LOWER _RAISE>;
+            then-layer = <_ADJUST>;
+        };
+    };
+};
