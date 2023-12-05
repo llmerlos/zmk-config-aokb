@@ -135,9 +135,9 @@
         raise_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp VD_L    &kp HOME    &kp UP      &kp END     &kp VD_U                &kp CARET   &kp AMPS    &kp LBKT    &kp RBKT    &kp DQT            
-&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp VD_R                &kp PIPE    &kp COLON   &kp LPAR    &kp RPAR    &kp SQT     &trans    
-&trans      &mo _FUNCT  &kp PG_DN   &kp E_CC    &kp PG_UP   &kp DEL                 &kp E_NN    &kp BSLH    &kp LBRC    &kp RBRC    &kp QMARK   &kp RALT
+            &kp VD_L    &kp HOME    &kp UP      &kp END     &kp VD_U                &kp CARET   &kp LBKT    &kp RBKT    &kp PIPE    &kp DQT            
+&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp VD_R                &kp AMPS    &kp LPAR    &kp RPAR    &kp COLON   &kp SQT     &trans    
+&trans      &mo _FUNCT  &kp PG_DN   &kp E_CC    &kp PG_UP   &kp DEL                 &kp E_NN    &kp LBRC    &kp RBRC    &kp BSLH    &kp QMARK   &kp RALT
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
