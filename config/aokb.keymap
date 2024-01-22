@@ -139,7 +139,7 @@
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp E_IEX  &kp C_VOL_UP &kp C_PREV  &kp D_SHS   &bootloader             &bootloader &none       &none       &none       &none       
-&kp ESC     &kp KC_APP &kp C_VOL_DN &kp C_PP    &kp D_MUT   &none                  &out OUT_TOG &to _BASE   &to _GAME   &none       &none       &trans
+&kp ESC     &kp K_APP  &kp C_VOL_DN &kp C_PP    &kp D_MUT   &none                  &out OUT_TOG &to _BASE   &to _GAME   &none       &none       &trans
 &kp RCTL    &kp E_EYE  &kp C_MUTE   &kp C_NEXT  &kp D_SIL   &none                   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp E_IQM &kp RALT
                                     &kp RWIN    &mo _RAISE  &trans                  &trans      &mo _LOWER  &kp LSFT
             >;
