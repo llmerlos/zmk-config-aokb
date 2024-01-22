@@ -110,7 +110,7 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                  &qa E_ACF   &kp HOME    &kp UP      &kp END     &qa E_AOB              
 &kp ESC     &kp N6      &kp N7      &kp N8      &kp N9      &kp N0                  &qa E_ADI   &kp LEFT    &kp DOWN    &kp RIGHT   &qa E_ATC   &trans    
-&trans      &mo _FUNCT  &kp VD_L    &kp VD_UP   &kp VD_R    &kp CAPS                &kp PSCRN   &kp PG_DN   &kp INS     &kp PG_UP   &to _FUNCT  &kp RALT
+&trans      &mo _FUNCT  &kp VD_L    &kp VD_U    &kp VD_R    &kp CAPS                &kp PSCRN   &kp PG_DN   &kp INS     &kp PG_UP   &to _FUNCT  &kp RALT
                                     &trans      &mo _RAISE  &trans                  &trans      &mo _LOWER  &trans      
             >;
         };
