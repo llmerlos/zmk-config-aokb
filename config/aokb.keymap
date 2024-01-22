@@ -80,8 +80,8 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp Q       &kp W       &kp E       &kp R       &kp T                   &kp Y       &kp U       &kp I       &kp O       &kp P
 &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G                   &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp RET
-&kp LCTL    &kp Z       &kp X       &kp C       &kp V       &kp B                   &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp LALT
-                                    &kp LWIN    &mo _RAISE  &kp SPACE               &kp BSPC    &mo _LOWER  &kp RSFT
+&kp LCTL    &kp Z       &kp X       &kp C       &kp V       &kp B                   &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RSFT
+                                    &kp LWIN    &mo _RAISE  &kp SPACE               &kp BSPC    &mo _LOWER  &kp LALT
             >;
         };
 
@@ -100,8 +100,8 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &trans      &kp N1      &trans      &kp N2      &kp N3                  &trans      &trans      &kp UP      &trans      &trans
 &trans      &trans      &trans      &trans      &trans      &kp G                   &trans      &kp LEFT    &kp DOWN    &kp RIGHT   &trans      &kp LA(F4)
-&trans      &trans      &kp N4      &kp N5      &kp N6      &kp B                   &trans      &trans      &trans      &trans      &trans      &kp RALT
-                                    &trans      &trans      &trans                  &trans      &trans      &trans
+&trans      &trans      &kp N4      &kp N5      &kp N6      &kp B                   &trans      &trans      &trans      &trans      &trans      &trans
+                                    &trans      &trans      &trans                  &trans      &trans      &kp RALT
             >;
         };
 
@@ -110,8 +110,8 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT               &kp CARET   &kp AMPS    &kp ASTRK   &kp LPAR    &kp RPAR               
 &kp ESC     &kp TILDE   &kp MINUS   &qp PLUS    &qp EQUAL   &kp E_LL                &kp LBRC    &kp LBKT    &kp RBKT    &kp RBRC    &kp SQT     &trans    
-&trans      &kp GRAVE   &kp E_OM    &kp E_OF    &kp UNDER   &kp E_EUR               &kp BSLH    &kp PIPE    &kp LT      &kp GT      &kp DQT     &kp RALT
-                                    &trans      &mo _RAISE  &trans                  &kp DEL     &mo _LOWER  &trans
+&trans      &kp GRAVE   &kp E_OM    &kp E_OF    &kp UNDER   &kp E_EUR               &kp BSLH    &kp PIPE    &kp LT      &kp GT      &kp DQT     &trans
+                                    &trans      &mo _RAISE  &trans                  &kp DEL     &mo _LOWER  &kp RALT
             >;
         };
 
@@ -120,8 +120,8 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                  &qa E_ACF   &kp HOME    &kp UP      &kp END     &qa E_AOB              
 &kp ESC     &kp N6      &kp N7      &kp N8      &kp N9      &kp N0                  &qa E_ADI   &kp LEFT    &kp DOWN    &kp RIGHT   &qa E_ATC   &trans    
-&trans      &mo _FUNCT  &kp VD_L    &kp VD_U    &kp VD_R    &kp CAPS                &kp PSCRN   &kp PG_DN   &kp INS     &kp PG_UP   &to _FUNCT  &kp RALT
-                                    &trans      &mo _RAISE  &trans                  &trans      &mo _LOWER  &trans      
+&trans      &mo _FUNCT  &kp VD_L    &kp VD_U    &kp VD_R    &kp CAPS                &kp PSCRN   &kp PG_DN   &kp INS     &kp PG_UP   &to _FUNCT  &trans
+                                    &trans      &mo _RAISE  &trans                  &kp DEL     &mo _LOWER  &kp RALT
             >;
         };
 
@@ -140,8 +140,8 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp E_IEX  &kp C_VOL_UP &kp C_PREV  &kp D_SHS   &bootloader             &bootloader &none       &none       &none       &none       
 &kp ESC     &kp K_APP  &kp C_VOL_DN &kp C_PP    &kp D_MUT   &none                  &out OUT_TOG &to _BASE   &to _GAME   &none       &none       &trans
-&kp RCTL    &kp E_EYE  &kp C_MUTE   &kp C_NEXT  &kp D_SIL   &none                   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp E_IQM &kp RALT
-                                    &kp RWIN    &mo _RAISE  &trans                  &trans      &mo _LOWER  &kp LSFT
+&kp RCTL    &kp E_EYE  &kp C_MUTE   &kp C_NEXT  &kp D_SIL   &none                   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp E_IQM &kp LSFT
+                                    &kp RWIN    &mo _RAISE  &trans                  &trans      &mo _LOWER  &kp RALT
             >;
         };
     };
