@@ -28,6 +28,8 @@
 #define E_OF    RA(N2)
 #define E_OM    RA(N3)
 #define E_DEG   RA(SEMI)
+#define E_EUR   RA(N5)
+#define E_EYE   RA(BSLH)
 
 #define E_AOB   RA(GRAVE)
 #define E_ATC   RA(SQT)
@@ -79,7 +81,7 @@
             &kp Q       &kp W       &kp E       &kp R       &kp T                   &kp Y       &kp U       &kp I       &kp O       &kp P
 &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G                   &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp RET
 &kp LCTL    &kp Z       &kp X       &kp C       &kp V       &kp B                   &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp LALT
-                                    &kp LWIN    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT
+                                    &kp LWIN    &mo _RAISE  &kp SPACE               &mo _LOWER  &kp BSPC    &kp RSFT
             >;
         };
 
@@ -89,7 +91,7 @@
             &kp TAB     &kp Q       &kp W       &kp E       &kp R                   &kp Y       &kp U       &kp I       &kp O       &kp P                
 &kp ESC     &kp LSFT    &kp A       &kp S       &kp D       &kp F                   &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp RET 
 &kp T       &kp LCTL    &kp Z       &kp X       &kp C       &kp V                   &kp N       &kp M       &kp VD_L    &kp VD_U    &kp VD_R    &kp LGUI
-                                    &kp LALT    &kp SPACE   &mo _GNUM               &mo _LOWER  &kp BSPC    &talpha
+                                    &kp LALT    &mo _GNUM   &kp SPACE               &mo _LOWER  &kp BSPC    &talpha
             >;
         };
 
@@ -103,43 +105,43 @@
             >;
         };
 
-        lower_layer {
-            bindings = <
-//          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT               &qa E_AOB   &kp N7      &kp N8      &kp N9      &qa E_ATC              
-&trans      &kp TILDE   &kp MINUS   &qp PLUS    &qp EQUAL   &kp ASTRK               &kp DOT     &kp N4      &kp N5      &kp N6      &kp N0      &trans    
-&trans      &kp GRAVE   &kp LT      &kp GT      &kp UNDER   &kp FSLH                &kp COMMA   &kp N1      &kp N2      &kp N3      &mo _FUNCT  &kp RALT
-                                    &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
-            >;
-        };
-
         raise_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp VD_L    &kp HOME    &kp UP      &kp END     &kp VD_U                &kp CARET   &kp LBKT    &kp RBKT    &kp PIPE    &kp DQT            
-&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp VD_R                &kp AMPS    &kp LPAR    &kp RPAR    &kp COLON   &kp SQT     &trans    
-&trans      &mo _FUNCT  &kp PG_DN   &kp E_CC    &kp PG_UP   &kp DEL                 &kp E_NN    &kp LBRC    &kp RBRC    &kp BSLH    &kp QMARK   &kp RALT
-                                    &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
+            &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                  &qa E_ACF   &kp HOME    &kp UP      &kp END     &qa E_AOB              
+&kp ESC     &kp N6      &kp N7      &kp N8      &kp N9      &kp N0                  &qa E_ADI   &kp LEFT    &kp DOWN    &kp RIGHT   &qa E_ATC   &trans    
+&trans      &mo _FUNCT  &kp VD_L    &kp VD_UP   &kp VD_R    &kp CAPS                &kp PSCRN   &kp PG_DN   &kp INS     &kp PG_UP   &to _FUNCT  &kp RALT
+                                    &trans      &mo _RAISE  &trans                  &trans      &mo _LOWER  &trans      
+            >;
+        };
+
+        lower_layer {
+            bindings = <
+//          |           |           |           |           |           |           |           |           |           |           |           |           |           
+            &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT               &kp CARET   &kp AMPS    &kp ASTRK   &kp LPAR    &kp RPAR               
+&kp ESC     &kp TILDE   &kp MINUS   &qp PLUS    &qp EQUAL   &kp E_LL                &kp LBRC    &kp LBKT    &kp RBKT    &kp RBRC    &kp SQT     &trans    
+&trans      &kp GRAVE   &kp E_OM    &kp E_OF    &kp UNDER   &kp E_EUR               &kp BSLH    &kp PIPE    &kp LT      &kp GT      &kp DQT     &kp RALT
+                                    &trans      &mo _RAISE  &trans                  &kp DEL     &mo _LOWER  &trans
             >;
         };
 
         funct_layer {
                             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &bootloader &none       &none       &none       &none                   &kp F12     &kp F7      &kp F8      &kp F9      &bootloader
-&trans      &none       &none       &none       &none       &none                   &kp F11     &kp F4      &kp F5      &kp F6      &bt BT_CLR  &trans
-&trans      &none       &none       &none       &none       &none                   &kp F10     &kp F1      &kp F2      &kp F3     &out OUT_TOG &trans
-                                    &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
+            &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                &kp KP_DIVIDE &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_MINUS
+&trans      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10             &kp KP_MULTIPLY &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_PLUS &kp KP_ENTER
+&trans     &out OUT_TOG &kp F11     &kp F12     &kp SLCK    &kp PAUSE_BREAK         &kp ESC     &kp KP_N1   &kp KP_N2   &kp KP_N3   &to _BASE   &kp KP_NUM
+                                    &trans      &mo _RAISE  &trans                  &kp BSPC    &kp KP_N0   &kp KP_DOT
             >;
         };
 
         adjust_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp E_IEX   &kp E_ADI   &kp E_LL    &kp D_SHS   &kp C_VOL_UP            &kp C_PREV  &kp INS     &kp PSCRN   &kp SLCK    &kp PAUSE_BREAK
-&trans      &kp CAPS    &kp E_OM    &kp E_OF    &kp D_MUT   &kp C_VOL_DN            &kp C_PP    &to _BASE   &to _GAME   &bt BT_SEL 3 &kp K_APP  &trans
-&kp RCTL    &kp NUHS    &kp E_ACF   &kp E_DEG   &kp D_SIL   &kp C_MUTE              &kp C_NEXT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp E_IQM &kp RALT
-                                    &kp RWIN    &trans      &mo _RAISE              &mo _LOWER  &trans      &kp LSFT
+            &kp E_IEX  &kp C_VOL_UP &kp C_PREV  &kp D_SHS   &bootloader             &bootloader &none       &none       &none       &none       
+&kp ESC     &kp KC_APP &kp C_VOL_DN &kp C_PP    &kp D_MUT   &none                  &out OUT_TOG &to _BASE   &to _GAME   &none       &none       &trans
+&kp RCTL    &kp E_EYE  &kp C_MUTE   &kp C_NEXT  &kp D_SIL   &none                   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp E_IQM &kp RALT
+                                    &kp RWIN    &mo _RAISE  &trans                  &trans      &mo _LOWER  &kp LSFT
             >;
         };
     };
