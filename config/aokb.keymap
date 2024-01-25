@@ -29,7 +29,7 @@
 #define E_OM    RA(N3)
 #define E_DEG   RA(SEMI)
 #define E_EUR   RA(N5)
-#define E_EYE   RA(BSLH)
+#define E_PND   RA(N4)
 
 #define E_AOB   RA(GRAVE)
 #define E_ATC   RA(SQT)
@@ -110,7 +110,7 @@
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT               &qa E_AOB   &kp N7      &kp N8      &kp N9      &qa E_ATC              
-&trans      &kp TILDE   &kp MINUS   &qp PLUS    &qp EQUAL   &qa E_ADI               &qa E_ACF   &kp N4      &kp N5      &kp N6      &kp N0      &trans    
+&trans      &kp TILDE   &kp MINUS   &qp PLUS    &qp EQUAL   &kp E_PND               &qa E_ADI   &kp N4      &kp N5      &kp N6      &kp N0      &trans    
 &trans      &kp GRAVE   &kp FSLH    &kp ASTRK   &kp UNDER   &kp E_EUR               &kp E_NN    &kp N1      &kp N2      &kp N3      &mo _FUNCT  &kp RALT
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans  
             >;
@@ -139,9 +139,9 @@
         adjust_layer {
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &kp E_IEX   &kp E_ATI   &kp E_LL    &kp D_SHS   &kp C_VOL_UP            &kp C_PREV  &kp INS     &kp PSCRN   &kp SLCK    &kp PAUSE_BREAK
+            &kp E_IEX   &qa E_ACF   &kp E_LL    &kp D_SHS   &kp C_VOL_UP            &kp C_PREV  &kp INS     &kp PSCRN   &kp SLCK    &kp PAUSE_BREAK
 &trans      &kp CAPS    &kp E_OM    &kp E_OF    &kp D_MUT   &kp C_VOL_DN            &kp C_PP    &to _BASE   &to _GAME   &bt BT_SEL 3 &kp K_APP  &trans
-&kp RALT    &kp NUHS    &kp E_EYE   &kp E_DEG   &kp D_SIL   &kp C_MUTE              &kp C_NEXT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp E_IQM &kp RCTL
+&kp RALT    &kp NUHS    &qa E_ATI   &kp E_DEG   &kp D_SIL   &kp C_MUTE              &kp C_NEXT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp E_IQM &kp RCTL
                                     &kp LSFT    &trans      &mo _RAISE              &mo _LOWER  &trans      &kp RWIN
             >;
         };
