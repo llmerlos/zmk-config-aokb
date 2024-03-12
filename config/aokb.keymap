@@ -81,7 +81,7 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp Q       &kp W       &kp E       &kp R       &kp T                   &kp Y       &kp U       &kp I       &kp O       &kp P
 &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G                   &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp RET
-&kp LCTL    &kp Z       &kp X       &kp C       &kp V       &kp B                   &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp LALT
+&kp LCTL    &kp Z       &kp X       &kp C       &kp V       &kp B                   &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp SQT
                                     &kp LWIN    &kp SPACE   &mo _RAISE              &mo _LOWER  &kp BSPC    &kp RSFT     
             >;
         };
@@ -101,7 +101,7 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &trans      &kp N1      &trans      &kp N2      &kp N3                  &kp VD_U    &trans      &kp UP      &trans      &kp VD_R
 &trans      &trans      &trans      &trans      &trans      &kp G                   &kp VD_L    &kp LEFT    &kp DOWN    &kp RIGHT   &trans      &kp LA(F4)
-&mo _FUNCT  &trans      &kp N4      &kp N5      &kp N6      &kp B                   &trans      &trans      &trans      &trans      &trans      &trans
+&trans      &trans      &kp N4      &kp N5      &kp N6      &kp B                   &trans      &trans      &trans      &trans      &trans      &trans
                                     &trans      &trans      &trans                  &trans      &trans      &trans    
             >;
         };
@@ -111,7 +111,7 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT               &qa E_AOB   &kp N7      &kp N8      &kp N9      &qa E_ATC              
 &trans      &kp TILDE   &kp MINUS   &qp PLUS    &qp EQUAL   &kp E_PND               &qa E_ADI   &kp N4      &kp N5      &kp N6      &kp N0      &trans    
-&trans      &kp GRAVE   &kp FSLH    &kp ASTRK   &kp UNDER   &kp E_EUR               &kp E_NN    &kp N1      &kp N2      &kp N3      &mo _FUNCT  &trans
+&trans      &kp GRAVE   &kp FSLH    &kp ASTRK   &kp UNDER   &kp E_EUR               &kp E_NN    &kp N1      &kp N2      &kp N3      &mo _FUNCT  &kp LALT
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans  
             >;
         };
@@ -120,8 +120,8 @@
             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp VD_L    &kp HOME    &kp UP      &kp END     &kp VD_U                &kp CARET   &kp AMPS    &kp DQT     &kp LPAR    &kp RPAR               
-&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp VD_R                &kp LBRC    &kp LBKT    &kp RBKT    &kp RBRC    &kp SQT     &trans    
-&trans      &mo _FUNCT  &kp PG_DN   &kp E_CC    &kp PG_UP   &kp DEL                 &kp BSLH    &kp PIPE    &kp LT      &kp GT      &kp QMARK   &trans
+&trans      &kp ESC     &kp LEFT    &kp DOWN    &kp RIGHT   &kp VD_R                &kp LBRC    &kp LBKT    &kp RBKT    &kp RBRC    &kp COLON   &trans    
+&trans      &mo _FUNCT  &kp PG_DN   &kp E_CC    &kp PG_UP   &kp DEL                 &kp BSLH    &kp PIPE    &kp LT      &kp GT      &kp QMARK   &kp LALT
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans     
             >;
         };
@@ -129,9 +129,9 @@
         funct_layer {
                             bindings = <
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
-            &bootloader &kp F7      &kp F8      &kp F9      &kp F12                 &kp F12     &kp F7      &kp F8      &kp F9      &bootloader
-&trans      &bt BT_CLR  &kp F4      &kp F5      &kp F6      &kp F11                 &kp F11     &kp F4      &kp F5      &kp F6      &bt BT_CLR  &trans
-&trans     &out OUT_TOG &kp F1      &kp F2      &kp F3      &kp F10                 &kp F10     &kp F1      &kp F2      &kp F3     &out OUT_TOG &trans
+            &bootloader &sk LSFT    &sk LALT    &sk RALT    &sk RSFT                &kp F12     &kp F7      &kp F8      &kp F9      &bootloader
+&trans      &bt BT_CLR  &sk LCTL    &sk LGUI    &sk RGUI    &sk RCTL                &kp F11     &kp F4      &kp F5      &kp F6      &bt BT_CLR  &trans
+&trans     &out OUT_TOG &trans      &trans      &trans      &trans                  &kp F10     &kp F1      &kp F2      &kp F3     &out OUT_TOG &kp LALT
                                     &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans
             >;
         };
@@ -141,8 +141,8 @@
 //          |           |           |           |           |           |           |           |           |           |           |           |           |           
             &kp E_IEX   &qa E_ACF   &kp E_LL    &kp D_SHS   &kp C_VOL_UP            &kp C_PREV  &kp INS     &kp PSCRN   &kp SLCK    &kp PAUSE_BREAK
 &trans      &kp CAPS    &kp E_OM    &kp E_OF    &kp D_MUT   &kp C_VOL_DN            &kp C_PP    &to _BASE   &to _GAME   &sk RALT    &kp K_APP  &trans
-&kp RALT    &kp NUHS    &qa E_ATI   &kp E_DEG   &kp D_SIL   &kp C_MUTE              &kp C_NEXT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp E_IQM &kp RCTL
-                                    &kp LSFT    &trans      &mo _RAISE              &mo _LOWER  &trans      &kp RWIN
+&trans      &kp NUHS    &qa E_ATI   &kp E_DEG   &kp D_SIL   &kp C_MUTE              &kp C_NEXT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp E_IQM &trans  
+                                    &trans      &trans      &mo _RAISE              &mo _LOWER  &trans      &trans   
             >;
         };
     };
